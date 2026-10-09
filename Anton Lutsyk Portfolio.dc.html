@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Anton Lutsyk — UX/UI Designer</title>
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/motion.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/base.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/components/components.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/styles.css">
+  <script src="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/_ds_bundle.js"></script>
+  <style>
+    html{scroll-behavior:auto}
+    body{margin:0;background:#F4F3EF;overflow-x:hidden}
+    a{color:#111111}
+    a:hover{color:#111111}
+  </style>
+</helmet>
+
+<div style="font-family:var(--font-sans);background:var(--bg);color:var(--fg-1);overflow-x:clip;min-height:100vh">
+
+  <div style="position:fixed;top:0;left:0;right:0;z-index:60;--header-h:{{ headerH }};transition:transform .6s var(--ease-out)">
+    <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Header" items="{{ navItems }}" active="{{ active }}" on-navigate="{{ navigate }}" role="{{ hdrRole }}" status="{{ hdrStatus }}" sticky="{{ false }}" hint-size="100%,72px"></x-import>
+  </div>
+  <div style="height:72px"></div>
+
+  <!-- 01 / INTRO -->
+  <section id="intro" data-screen-label="01 Intro" style="scroll-margin-top:72px;padding-top:clamp(32px,4vw,64px)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-intro="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="01" label="Intro" rule="{{ true }}" aside="Portfolio ©26" hint-size="100%,28px"></x-import>
+      </div>
+
+      <dl data-intro="120" style="display:grid;grid-template-columns:{{ L.metaCols }};gap:20px var(--gutter);margin:22px 0 0">
+        <div style="display:flex;flex-direction:column;gap:8px;margin:0">
+          <dt style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">Role</dt>
+          <dd style="margin:0;font-size:14px;font-weight:600">UX/UI Designer</dd>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin:0">
+          <dt style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">Experience</dt>
+          <dd style="margin:0;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums">2+ years</dd>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin:0">
+          <dt style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">Platforms</dt>
+          <dd style="margin:0;font-size:14px;font-weight:600">Web / Mobile</dd>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin:0">
+          <dt style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">Based in</dt>
+          <dd style="margin:0;font-size:14px;font-weight:600">Ukraine</dd>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin:0">
+          <dt style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">Status</dt>
+          <dd style="margin:0;font-size:14px;font-weight:600;display:flex;align-items:center;gap:10px"><i style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--fg-1)"></i>Available for work</dd>
+        </div>
+      </dl>
+
+      <div style="position:relative;margin-top:clamp(48px,8vw,140px)">
+        <h1 class="al-display al-display--mega al-reveal al-reveal--in" style="margin:0;white-space:nowrap">
+          <span class="al-line" data-drift="-1" style="--i:0"><span>Anton</span></span>
+          <span class="al-line" data-drift="1" style="--i:1;text-align:{{ L.line2Align }};padding-left:{{ L.line2Pad }}"><span>Lutsyk</span></span>
+        </h1>
+        <div data-intro="520" style="position:{{ L.rolePos }};left:0;bottom:.4vw;margin-top:{{ L.roleMt }};display:flex;align-items:flex-end;gap:16px">
+          <span style="font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--fg-2);padding-bottom:.5em">/ 00</span>
+          <p style="margin:0;font-size:var(--fs-h2);font-weight:800;letter-spacing:-0.045em;line-height:.92">UX/UI<br><em style="font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:-0.02em">Designer</em></p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:48px;margin-top:clamp(56px,7vw,120px);align-items:start">
+        <div data-intro="640" style="grid-column:{{ L.heroFocus }};order:{{ L.focusOrder }}">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding-bottom:12px;border-bottom:1px solid var(--border-strong)"><span style="color:var(--fg-2);font-weight:400">{ </span>Focus<span style="color:var(--fg-2);font-weight:400"> }</span></div>
+          <sc-for list="{{ focus }}" as="f" hint-placeholder-count="5">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--border);font-size:15px;font-weight:600">
+              <span>{{ f.label }}</span><span style="font-size:11px;color:var(--fg-2);font-variant-numeric:tabular-nums">{{ f.n }}</span>
+            </div>
+          </sc-for>
+        </div>
+
+        <div data-intro="720" style="grid-column:{{ L.heroLead }};order:{{ L.leadOrder }};display:flex;flex-direction:column;gap:36px">
+          <p style="margin:0;font-size:var(--fs-lead);line-height:1.25;letter-spacing:-0.025em;font-weight:500;text-wrap:pretty;max-width:30ch">UX/UI Designer with 2+ years of experience designing digital products for web <em style="font-family:var(--font-serif);font-style:italic;font-weight:400">and</em> mobile.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center">
+            <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Button" icon="arrow-down" on-click="{{ goWork }}" hint-size="140px,48px">Selected work</x-import>
+            <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Button" variant="ghost" icon="download" href="assets/Anton-Lutsyk-CV.pdf" target="_blank" hint-size="120px,32px">Download CV</x-import>
+          </div>
+        </div>
+
+        <sc-if value="{{ showPortrait }}" hint-placeholder-val="{{ true }}">
+          <div style="grid-column:{{ L.heroFig }};order:3;justify-self:{{ L.figJustify }};width:{{ L.figW }}">
+            <figure class="{{ figCls }}" style="--ratio:4/5">
+              <div class="al-figure__frame">
+                <img src="assets/portrait.png" alt="Portrait of Anton Lutsyk" style="object-position:50% 20%">
+              </div>
+              <figcaption class="al-figure__cap"><span>Fig. 01 — Anton Lutsyk</span><span>2026</span></figcaption>
+            </figure>
+          </div>
+        </sc-if>
+      </div>
+
+      <div data-intro="900" style="display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:clamp(48px,6vw,96px);padding:14px 0;border-top:1px solid var(--border);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">
+        <span style="display:flex;align-items:center;gap:8px;color:var(--fg-1)">Scroll <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-down" size="{{ 14 }}" hint-size="14px,14px"></x-import></span>
+        <span>B2B — SaaS — E-commerce — Mobile</span>
+        <span style="font-variant-numeric:tabular-nums">(08)</span>
+      </div>
+    </div>
+
+    <div style="margin-top:0">
+      <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Marquee" size="label" speed="{{ 48 }}" items="{{ tickerItems }}" hint-size="100%,40px"></x-import>
+    </div>
+  </section>
+
+  <!-- 02 / EXPERIENCE -->
+  <section id="experience" data-screen-label="02 Experience" style="scroll-margin-top:72px;padding-top:var(--section-y)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="02" label="Experience" rule="{{ true }}" aside="(03) Positions" hint-size="100%,28px"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:24px;margin:clamp(32px,4vw,64px) 0 clamp(48px,6vw,96px)">
+        <p data-reveal="80" style="grid-column:{{ L.headLabel }};margin:0;font-size:14px;line-height:1.5;color:var(--fg-2);max-width:28ch">An archive of roles, from practice to freelance. Hover a row for details.</p>
+        <h2 data-reveal="160" style="grid-column:{{ L.headMain }};margin:0;font-size:var(--fs-h1);font-weight:800;letter-spacing:-0.05em;line-height:.95">Work <em style="font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:-0.025em">history</em></h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);align-items:start">
+        <div style="grid-column:{{ L.xList }};border-bottom:1px solid var(--border)" onMouseLeave="{{ xLeave }}">
+          <sc-for list="{{ xp }}" as="x" hint-placeholder-count="3">
+            <div data-reveal="{{ x.delay }}">
+              <div onMouseEnter="{{ x.enter }}" onClick="{{ x.toggle }}" style="position:relative;display:grid;grid-template-columns:{{ L.xCols }};grid-template-areas:{{ x.areas }};column-gap:var(--gutter);row-gap:12px;align-items:baseline;padding:clamp(24px,3vw,44px) 0;border-top:1px solid var(--border);cursor:pointer">
+                <div style="position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--fg-1);transform-origin:left;transform:scaleX({{ x.line }});transition:transform 1s var(--ease-out)"></div>
+                <span style="grid-area:idx;align-self:start;padding-top:.6em;font-size:12px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums"><span style="padding:3px 4px;margin-left:-4px;background:{{ x.chipBg }};color:{{ x.chipFg }};transition:background .24s,color .24s">/ {{ x.n }}</span></span>
+                <div style="grid-area:title;min-width:0;transform:translateX({{ x.shift }});transition:transform .6s var(--ease-out)">
+                  <h3 style="margin:0;font-size:var(--fs-h1);font-weight:800;letter-spacing:-0.05em;line-height:.95;color:{{ x.color }};transition:color .6s var(--ease-out)">{{ x.company }}</h3>
+                  <div style="margin-top:14px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">{{ x.roleLine }}</div>
+                </div>
+                <div style="grid-area:period;display:flex;flex-direction:column;gap:6px;align-items:{{ L.periodAlign }};font-variant-numeric:tabular-nums">
+                  <span style="font-size:var(--fs-h3);font-weight:700;letter-spacing:-0.03em;line-height:1;white-space:nowrap;color:{{ x.color }};transition:color .6s var(--ease-out)">{{ x.period }}</span>
+                  <span style="font-size:12px;font-weight:600;color:var(--fg-2)">{{ x.exact }}</span>
+                </div>
+                <span style="grid-area:arrow;align-self:start;padding-top:.4em;display:inline-flex;transform:rotate({{ x.rot }});transition:transform .6s var(--ease-out)">
+                  <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-up-right" size="{{ 22 }}" hint-size="22px,22px"></x-import>
+                </span>
+                <sc-if value="{{ x.inline }}" hint-placeholder-val="{{ false }}">
+                  <ol style="grid-area:panel;list-style:none;margin:8px 0 0;padding:0">
+                    <sc-for list="{{ x.bullets }}" as="b" hint-placeholder-count="5">
+                      <li style="display:grid;grid-template-columns:32px minmax(0,1fr);padding:10px 0;border-top:1px solid var(--border);font-size:15px;line-height:1.5"><span style="font-size:11px;font-weight:600;color:var(--fg-2);padding-top:.3em">{{ b.n }}</span><span>{{ b.t }}</span></li>
+                    </sc-for>
+                  </ol>
+                </sc-if>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <aside style="grid-column:9 / 13;display:{{ L.xPanelDisplay }};position:sticky;top:112px;padding-left:clamp(0px,2vw,40px)">
+          <div style="display:grid">
+            <sc-for list="{{ xp }}" as="x" hint-placeholder-count="1">
+              <div style="grid-area:1 / 1;opacity:{{ x.panelOp }};transform:translateY({{ x.panelY }});transition:opacity .6s var(--ease-out),transform .9s var(--ease-out);pointer-events:{{ x.pe }}">
+                <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding-bottom:12px;border-bottom:1px solid var(--border-strong)">
+                  <span>/ {{ x.n }} — Details</span><span style="color:var(--fg-2);font-variant-numeric:tabular-nums">{{ x.exact }}</span>
+                </div>
+                <p style="margin:24px 0 4px;font-size:var(--fs-h3);font-weight:700;letter-spacing:-0.03em;line-height:1.06">{{ x.company }}</p>
+                <p style="margin:0 0 24px;font-size:15px;font-weight:500;color:var(--fg-2)">{{ x.roleFull }}</p>
+                <ol style="list-style:none;margin:0;padding:0">
+                  <sc-for list="{{ x.bullets }}" as="b" hint-placeholder-count="5">
+                    <li style="display:grid;grid-template-columns:32px minmax(0,1fr);padding:11px 0;border-top:1px solid var(--border);font-size:15px;line-height:1.5;text-wrap:pretty"><span style="font-size:11px;font-weight:600;color:var(--fg-2);padding-top:.35em;font-variant-numeric:tabular-nums">{{ b.n }}</span><span>{{ b.t }}</span></li>
+                  </sc-for>
+                </ol>
+              </div>
+            </sc-for>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 / EXPERTISE -->
+  <section id="expertise" data-screen-label="03 Expertise" style="scroll-margin-top:72px;padding-top:var(--section-y)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="03" label="Expertise" rule="{{ true }}" aside="(09) Disciplines" hint-size="100%,28px"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);margin-top:clamp(32px,4vw,64px);align-items:start">
+        <div style="grid-column:1 / 4;display:{{ L.exCounterDisplay }};position:sticky;top:112px">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase"><span style="color:var(--fg-2);font-weight:400">{ </span>Discipline<span style="color:var(--fg-2);font-weight:400"> }</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;margin-top:20px;font-variant-numeric:tabular-nums">
+            <span style="font-size:var(--fs-h1);font-weight:800;letter-spacing:-0.06em;line-height:.82">{{ exCur }}</span>
+            <span style="font-size:14px;font-weight:600;color:var(--fg-2)">/ 009</span>
+          </div>
+          <div style="margin-top:20px;font-size:14px;font-weight:600;color:var(--fg-2);max-width:20ch">{{ exCurLabel }}</div>
+        </div>
+        <div style="grid-column:{{ L.exList }};border-bottom:1px solid var(--border)" onMouseLeave="{{ exLeave }}">
+          <sc-for list="{{ ex }}" as="e" hint-placeholder-count="9">
+            <div data-reveal="{{ e.delay }}">
+              <div onMouseEnter="{{ e.enter }}" style="display:grid;grid-template-columns:{{ L.exCols }};column-gap:var(--gutter);align-items:baseline;padding:clamp(12px,1.4vw,22px) 0;border-top:1px solid var(--border)">
+                <span style="font-size:12px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums;color:{{ e.numColor }};transition:color .24s">/ {{ e.n }}</span>
+                <span style="min-width:0;font-size:clamp(30px,5.2vw,92px);font-weight:800;letter-spacing:-0.05em;line-height:.98;color:{{ e.color }};transform:translateX({{ e.shift }});transition:transform .6s var(--ease-out),color .6s var(--ease-out)"><span style="background:{{ e.bg }};padding:0 .05em;margin-left:-.05em;transition:background .24s">{{ e.label }}</span></span>
+                <span style="display:inline-flex;justify-self:end;opacity:{{ e.arrowOp }};transform:translateX({{ e.arrowX }});transition:opacity .4s,transform .6s var(--ease-out)">
+                  <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-right" size="{{ 22 }}" hint-size="22px,22px"></x-import>
+                </span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 / SELECTED WORK -->
+  <section id="work" data-screen-label="04 Selected work" style="scroll-margin-top:72px;padding-top:var(--section-y)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="04" label="Selected work" rule="{{ true }}" aside="Index — Behance" hint-size="100%,28px"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:24px;margin:clamp(32px,4vw,64px) 0 clamp(48px,6vw,96px);align-items:end">
+        <h2 data-reveal="80" style="grid-column:{{ L.workHead }};margin:0;font-size:var(--fs-display);font-weight:800;letter-spacing:-0.055em;line-height:.88">Selected <em style="font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:-0.025em">work</em></h2>
+        <div data-reveal="160" style="grid-column:{{ L.workNote }};display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+          <p style="margin:0;font-size:14px;line-height:1.5;color:var(--fg-2);max-width:30ch">Project work is published on Behance. This index groups it by product area.</p>
+          <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.TextLink" href="https://www.behance.net/antonlutsyk" external="{{ true }}" size="sm" hint-size="160px,22px">behance.net/antonlutsyk</x-import>
+        </div>
+      </div>
+
+      <div style="display:{{ L.wHeadDisplay }};grid-template-columns:{{ L.wCols }};column-gap:var(--gutter);padding-bottom:12px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">
+        <span>No.</span><span>Area</span><span>Discipline</span><span>Published</span><span></span>
+      </div>
+      <div style="border-bottom:1px solid var(--border)" onMouseLeave="{{ wLeave }}">
+        <sc-for list="{{ work }}" as="w" hint-placeholder-count="3">
+          <div data-reveal="{{ w.delay }}">
+            <a href="https://www.behance.net/antonlutsyk" target="_blank" rel="noreferrer" onMouseEnter="{{ w.enter }}" data-cursor="view" style="position:relative;display:grid;grid-template-columns:{{ L.wCols }};grid-template-areas:{{ L.wAreas }};column-gap:var(--gutter);row-gap:10px;align-items:baseline;padding:clamp(22px,2.6vw,40px) 0;border-top:1px solid var(--border);color:var(--fg-1);text-decoration:none">
+              <div style="position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--fg-1);transform-origin:left;transform:scaleX({{ w.line }});transition:transform 1s var(--ease-out)"></div>
+              <span style="grid-area:idx;align-self:start;padding-top:.6em;font-size:12px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums"><span style="padding:3px 4px;margin-left:-4px;background:{{ w.chipBg }};transition:background .24s">/ {{ w.n }}</span></span>
+              <span style="grid-area:title;min-width:0;font-size:var(--fs-h1);font-weight:800;letter-spacing:-0.05em;line-height:.95;color:{{ w.color }};transform:translateX({{ w.shift }});transition:transform .6s var(--ease-out),color .6s var(--ease-out)">{{ w.area }}</span>
+              <span style="grid-area:disc;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:{{ w.metaColor }};transition:color .4s">{{ w.disc }}</span>
+              <span style="grid-area:plat;display:{{ L.wPlatDisplay }};font-size:14px;font-weight:600;color:var(--fg-2)">Behance</span>
+              <span style="grid-area:arrow;justify-self:end;align-self:start;padding-top:.4em;display:inline-flex;transform:rotate({{ w.rot }});transition:transform .6s var(--ease-out)">
+                <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-up-right" size="{{ 22 }}" hint-size="22px,22px"></x-import>
+              </span>
+            </a>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div ref="{{ previewRef }}" class="{{ previewCls }}" aria-hidden="true">
+      <div class="al-inverse" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:18px;box-sizing:border-box">
+        <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)"><span>Fig. {{ pv.n }}</span><span>{{ pv.disc }}</span></div>
+        <div>
+          <div style="font-size:clamp(32px,3.4vw,56px);font-weight:800;letter-spacing:-0.05em;line-height:.92">{{ pv.area }}</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:12px;border-top:1px solid var(--border);font-size:13px;font-weight:600"><span>View on Behance</span><span style="width:10px;height:10px;background:var(--accent)"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 / SKILLS -->
+  <section id="skills" data-screen-label="05 Skills" style="scroll-margin-top:72px;padding-top:var(--section-y)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="05" label="Skills" rule="{{ true }}" aside="Hard (09) — Soft (06)" hint-size="100%,28px"></x-import>
+      </div>
+    </div>
+    <div data-reveal="80" style="margin:clamp(32px,4vw,64px) 0 clamp(56px,7vw,112px)">
+      <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Marquee" size="lg" speed="{{ 70 }}" inverse="{{ true }}" items="{{ marqueeItems }}" hint-size="100%,140px"></x-import>
+    </div>
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:64px;align-items:start">
+        <p data-reveal="0" style="grid-column:1 / 4;display:{{ L.skillsNote }};margin:0;font-size:14px;line-height:1.5;color:var(--fg-2);max-width:24ch">What I bring to a product team — on the canvas and around it.</p>
+        <div data-reveal="80" class="al-skills" style="grid-column:{{ L.hard }}">
+          <div class="al-skills__head"><h3 class="al-skills__title">Hard skills</h3><span class="al-skills__idx">(09)</span></div>
+          <ul class="al-skills__list">
+            <sc-for list="{{ hard }}" as="s" hint-placeholder-count="9">
+              <li class="al-skills__item" style="font-size:clamp(17px,1.5vw,22px);font-weight:600;letter-spacing:-0.02em"><span>{{ s.label }}</span><span class="al-skills__meta">{{ s.n }}</span></li>
+            </sc-for>
+          </ul>
+        </div>
+        <div data-reveal="160" class="al-skills" style="grid-column:{{ L.soft }}">
+          <div class="al-skills__head"><h3 class="al-skills__title">Soft <em style="font-family:var(--font-serif);font-style:italic;font-weight:400">skills</em></h3><span class="al-skills__idx">(06)</span></div>
+          <ul class="al-skills__list">
+            <sc-for list="{{ soft }}" as="s" hint-placeholder-count="6">
+              <li class="al-skills__item" style="font-size:clamp(17px,1.5vw,22px);font-weight:600;letter-spacing:-0.02em"><span>{{ s.label }}</span><span class="al-skills__meta">{{ s.n }}</span></li>
+            </sc-for>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 / ABOUT -->
+  <section id="about" data-screen-label="06 About" style="scroll-margin-top:72px;padding-top:var(--section-y)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="06" label="About" rule="{{ true }}" aside="{ UX/UI Designer }" hint-size="100%,28px"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:48px;margin-top:clamp(32px,4vw,64px);align-items:start">
+        <div data-reveal="80" style="grid-column:{{ L.aboutStat }};display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:flex-start;font-size:clamp(88px,10vw,176px);font-weight:800;letter-spacing:-0.06em;line-height:.82;font-variant-numeric:tabular-nums">2<span style="font-family:var(--font-serif);font-style:italic;font-weight:400;font-size:.5em;letter-spacing:0;line-height:1;margin-left:.04em">+</span></div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">Years designing</div>
+          <div style="font-size:14px;color:var(--fg-2)">Web &amp; mobile, since 2023</div>
+        </div>
+        <div style="grid-column:{{ L.aboutMain }};display:flex;flex-direction:column;gap:clamp(32px,4vw,56px)">
+          <p data-reveal="160" style="margin:0;font-size:clamp(26px,3.1vw,52px);font-weight:600;letter-spacing:-0.035em;line-height:1.1;text-indent:{{ L.aboutIndent }};text-wrap:pretty">I'm a UX/UI Designer focused on creating intuitive, modern and visually engaging digital products for web <em style="font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:-0.01em">and</em> mobile.</p>
+          <div data-reveal="240" style="display:grid;grid-template-columns:{{ L.aboutSub }};gap:32px var(--gutter)">
+            <p style="margin:0;font-size:17px;line-height:1.55;color:var(--fg-2);text-wrap:pretty">My work spans high-fidelity UI and prototypes in Figma, reusable UI components, UX flows and interaction patterns — and the visual side too: App Store and Google Play graphics, and brand identities adapted into cohesive app interfaces.</p>
+            <div>
+              <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);padding-bottom:10px;border-bottom:1px solid var(--border-strong)">Product areas</div>
+              <div style="display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:14px;font-size:var(--fs-h3);font-weight:700;letter-spacing:-0.03em;line-height:1.15">
+                <span>B2B</span><span style="color:var(--fg-3);font-weight:300">/</span><span>SaaS</span><span style="color:var(--fg-3);font-weight:300">/</span><span>E-commerce</span><span style="color:var(--fg-3);font-weight:300">/</span><span>Mobile products</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 / EDUCATION -->
+  <section id="education" data-screen-label="07 Education" style="scroll-margin-top:72px;padding-top:var(--section-y)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="07" label="Education" rule="{{ true }}" aside="(01)" hint-size="100%,28px"></x-import>
+      </div>
+      <div data-reveal="80" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:12px;align-items:baseline;padding:28px 0 30px;border-bottom:1px solid var(--border)">
+        <span style="grid-column:{{ L.eduA }};font-size:13px;font-weight:600;font-variant-numeric:tabular-nums">Sep 2019 — Jun 2025</span>
+        <span style="grid-column:{{ L.eduB }};font-size:var(--fs-h3);font-weight:700;letter-spacing:-0.03em;line-height:1.06">KPNU named after Ivan Ohienko</span>
+        <span style="grid-column:{{ L.eduC }};font-size:15px;font-weight:500;color:var(--fg-2);justify-self:{{ L.eduCJustify }}">Master's Degree, <em style="font-family:var(--font-serif);font-style:italic;font-weight:400;font-size:1.1em;color:var(--fg-1)">Computer Science</em></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 / CONTACT -->
+  <section id="contact" data-screen-label="08 Contact" style="scroll-margin-top:72px;padding:var(--section-y) 0">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="08" label="Contact" rule="{{ true }}" aside="Available for work" hint-size="100%,28px"></x-import>
+      </div>
+
+      <h2 ref="{{ contactRef }}" class="{{ contactCls }}" style="margin:clamp(40px,6vw,96px) 0 0;font-size:var(--fs-display);font-weight:800;letter-spacing:-0.06em;line-height:.86">
+        <span class="al-line" style="--i:0"><span>Let's</span></span>
+        <span class="al-line" style="--i:1;padding-left:{{ L.ctaIndent }}"><span>work</span></span>
+        <span class="al-line" style="--i:2"><span><em style="font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:-0.03em">together.</em></span></span>
+      </h2>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:32px;margin-top:clamp(56px,7vw,112px)">
+        <div data-reveal="0" style="grid-column:{{ L.headLabel }};display:flex;flex-direction:column;gap:12px">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase"><span style="color:var(--fg-2);font-weight:400">{ </span>Write to me<span style="color:var(--fg-2);font-weight:400"> }</span></div>
+          <p style="margin:0;font-size:14px;line-height:1.5;color:var(--fg-2);max-width:26ch">Open to freelance projects and full-time product roles.</p>
+        </div>
+        <div style="grid-column:{{ L.headMain }};display:flex;flex-direction:column;gap:clamp(32px,4vw,56px);min-width:0">
+          <div data-reveal="80" style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
+            <a class="al-contact__email" href="mailto:antonlut737@gmail.com" style="font-size:clamp(28px,5.2vw,92px)">antonlut737@gmail.com<x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-up-right" size="{{ 48 }}" hint-size="48px,48px"></x-import></a>
+            <button class="al-contact__copy" onClick="{{ copyEmail }}" style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">
+              <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="{{ copyIcon }}" size="{{ 14 }}" hint-size="14px,14px"></x-import>{{ copyLabel }}
+            </button>
+          </div>
+          <div style="border-bottom:1px solid var(--border)" onMouseLeave="{{ cLeave }}">
+            <sc-for list="{{ contacts }}" as="c" hint-placeholder-count="3">
+              <div data-reveal="{{ c.delay }}">
+                <a href="{{ c.href }}" target="_blank" rel="noreferrer" onMouseEnter="{{ c.enter }}" style="position:relative;display:grid;grid-template-columns:{{ L.cCols }};grid-template-areas:{{ L.cAreas }};column-gap:var(--gutter);row-gap:8px;align-items:baseline;padding:clamp(18px,2vw,28px) 0;border-top:1px solid var(--border);color:var(--fg-1);text-decoration:none">
+                  <div style="position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--fg-1);transform-origin:left;transform:scaleX({{ c.line }});transition:transform 1s var(--ease-out)"></div>
+                  <span style="grid-area:label;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">{{ c.label }}</span>
+                  <span style="grid-area:handle;min-width:0;overflow-wrap:anywhere;font-size:var(--fs-h3);font-weight:700;letter-spacing:-0.03em;line-height:1.06;transform:translateX({{ c.shift }});transition:transform .6s var(--ease-out)"><span style="background:{{ c.bg }};padding:0 .06em;margin-left:-.06em;transition:background .3s">{{ c.handle }}</span></span>
+                  <span style="grid-area:arrow;justify-self:end;display:inline-flex;transform:rotate({{ c.rot }});transition:transform .6s var(--ease-out)">
+                    <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-up-right" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+                  </span>
+                </a>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Footer" tagline="{{ footerTagline }}" columns="{{ footerColumns }}" year="{{ 2026 }}" note="Ukraine — Available for work" hint-size="100%,560px"></x-import>
+
+  <div ref="{{ cursorRef }}" aria-hidden="true" style="position:fixed;left:0;top:0;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;pointer-events:none;z-index:200;display:none;background:var(--al-ink);box-shadow:0 0 0 1px var(--al-paper);transition:background .3s,box-shadow .3s;will-change:transform"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;customCursor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Interaction&quot;},&quot;showPortrait&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;full&quot;,&quot;reduced&quot;],&quot;default&quot;:&quot;full&quot;,&quot;tsType&quot;:&quot;'full' | 'reduced'&quot;,&quot;section&quot;:&quot;Interaction&quot;}}">
+class Component extends DCLogic {
+  state = { vw: typeof window !== 'undefined' ? window.innerWidth : 1440, active: 'intro', compact: false, xHover: 0, xOpen: null, xIn: false, exHover: null, exLast: 0, wHover: null, wLast: 0, cHover: null, copied: false, heroIn: false, contactIn: false };
+  cursorRef = React.createRef();
+  previewRef = React.createRef();
+  contactRef = React.createRef();
+
+  data = {
+    focus: ['B2B', 'SaaS', 'E-commerce', 'Mobile', 'Product design'],
+    xp: [
+      { company: 'Web Art Work', roleLine: 'UX/UI Designer · Freelance', roleFull: 'UX/UI Designer (Freelance)', period: '2023 — Now', exact: 'Sep 2023 — Present', bullets: ['Designed mobile app interfaces and high-fidelity UI in Figma.', 'Created prototypes, UI components and visual assets for mobile apps.', 'Designed App Store and Google Play screenshots and promo graphics.', 'Adapted brand identities into cohesive app interfaces and marketing visuals.', 'Worked across different industries, brands and product requirements.'] },
+      { company: 'N1 Agency', roleLine: 'UX/UI Designer · Graphic Designer', roleFull: 'UX/UI Designer | Graphic Designer', period: '2025 — 2026', exact: 'Sep 2025 — Aug 2026', bullets: ['Designed mobile app UI and high-fidelity interfaces in Figma.', 'Created prototypes, UI components and visual assets.', 'Designed App Store and Google Play promotional graphics.', 'Adapted brand identities for mobile interfaces and visuals.', 'Worked across different industries and product types.'] },
+      { company: 'HebronSoft', roleLine: 'UX/UI Designer · Practice', roleFull: 'UX/UI Designer (Practice)', period: '2024', exact: 'Sep 2024 — Jul 2024', bullets: ['Designed responsive interfaces for web applications.', 'Created wireframes, prototypes and high-fidelity UI in Figma.', 'Developed reusable components and maintained UI consistency.', 'Worked with UX flows and interaction patterns.', 'Collaborated with mentors and developers to improve design solutions.'] }
+    ],
+    ex: ['UX/UI Design', 'Product Design', 'Mobile App Design', 'Web Design', 'B2B & SaaS Design', 'Design Systems', 'Prototyping', 'Wireframing', 'Responsive Design'],
+    hard: ['UX/UI Design', 'Web Design', 'Mobile App Design', 'Product Design', 'B2B & SaaS Design', 'Prototyping', 'Wireframing', 'Design Systems', 'Responsive Design'],
+    soft: ['Client Communication', 'Problem Solving', 'Attention to Detail', 'Team Collaboration', 'Adaptability', 'Time Management'],
+    work: [
+      { area: 'Web / Mobile', disc: 'UX/UI' },
+      { area: 'B2B / SaaS', disc: 'Product design' },
+      { area: 'Mobile', disc: 'UI design' }
+    ],
+    contacts: [
+      { label: 'LinkedIn', handle: 'linkedin.com/in/lutsykanton', href: 'https://www.linkedin.com/in/lutsykanton' },
+      { label: 'Telegram', handle: '@antonlutsyk', href: 'https://t.me/antonlutsyk' },
+      { label: 'Behance', handle: 'behance.net/antonlutsyk', href: 'https://www.behance.net/antonlutsyk' }
+    ]
+  };
+
+  pad(n, l) { return String(n).padStart(l, '0'); }
+
+  scrollToId(id) {
+    if (id === 'home') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 64, behavior: 'smooth' });
+  }
+
+  componentDidMount() {
+    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches || this.props.motion === 'reduced';
+    this.fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    this.mx = innerWidth / 2; this.my = innerHeight / 2;
+    this.cx = this.mx; this.cy = this.my; this.cs = 0.22; this.px = this.mx; this.py = this.my; this.hot = false;
+
+    this.onResize = () => this.setState({ vw: innerWidth });
+    this.onMove = (e) => {
+      this.mx = e.clientX; this.my = e.clientY;
+      const t = e.target && e.target.closest ? e.target.closest('a,button,[data-cursor],[role="button"]') : null;
+      this.hot = !!t;
+    };
+    this.onScroll = () => {
+      const y = window.scrollY;
+      const compact = y > 40;
+      const ids = ['intro', 'experience', 'expertise', 'work', 'skills', 'about', 'education', 'contact'];
+      let active = 'intro';
+      for (const id of ids) { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < innerHeight * 0.4) active = id; }
+      if (compact !== this.state.compact || active !== this.state.active) this.setState({ compact, active });
+    };
+    addEventListener('resize', this.onResize);
+    if (typeof ResizeObserver !== 'undefined') { this.ro = new ResizeObserver(() => { if (innerWidth !== this.state.vw) this.setState({ vw: innerWidth }); }); this.ro.observe(document.documentElement); }
+    this.onResize();
+    addEventListener('mousemove', this.onMove, { passive: true });
+    addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+
+    // reveals
+    const vh = innerHeight;
+    this.io = new IntersectionObserver((ents) => {
+      ents.forEach((en) => { if (en.isIntersecting) { const el = en.target; el.style.opacity = '1'; el.style.transform = 'none'; this.io.unobserve(el); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    if (!this.reduced) {
+      document.querySelectorAll('[data-reveal]').forEach((el) => {
+        if (el.getBoundingClientRect().top < vh * 0.92) return;
+        const d = parseInt(el.getAttribute('data-reveal') || '0', 10);
+        el.style.opacity = '0'; el.style.transform = 'translateY(32px)';
+        el.style.transition = 'opacity 1s var(--ease-out) ' + d + 'ms, transform 1.2s var(--ease-out) ' + d + 'ms';
+        this.io.observe(el);
+      });
+      document.querySelectorAll('[data-intro]').forEach((el) => {
+        const d = parseInt(el.getAttribute('data-intro') || '0', 10);
+        el.style.opacity = '0'; el.style.transform = 'translateY(18px)';
+        el.style.transition = 'opacity 1.1s var(--ease-out) ' + d + 'ms, transform 1.2s var(--ease-out) ' + d + 'ms';
+        setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, 60);
+      });
+    }
+    this.heroT = setTimeout(() => this.setState({ heroIn: true }), 450);
+    this.cio = new IntersectionObserver((ents) => { if (ents[0].isIntersecting) { this.setState({ contactIn: true }); this.cio.disconnect(); } }, { threshold: 0.3 });
+    if (this.contactRef.current) this.cio.observe(this.contactRef.current); else this.setState({ contactIn: true });
+
+    // rAF loop: drift, cursor, preview
+    const drift = Array.from(document.querySelectorAll('[data-drift]'));
+    const loop = () => {
+      const y = window.scrollY;
+      if (!this.reduced && y < innerHeight * 1.6) drift.forEach((el) => { const f = parseFloat(el.getAttribute('data-drift')); el.style.transform = 'translate3d(' + (f * y * 0.14).toFixed(1) + 'px,0,0)'; });
+      const c = this.cursorRef.current;
+      if (c) {
+        const on = this.fine && this.props.customCursor !== false;
+        c.style.display = on ? 'block' : 'none';
+        if (on) {
+          this.cx += (this.mx - this.cx) * 0.28; this.cy += (this.my - this.cy) * 0.28;
+          this.cs += ((this.hot ? 1 : 0.2) - this.cs) * 0.18;
+          c.style.transform = 'translate3d(' + this.cx.toFixed(1) + 'px,' + this.cy.toFixed(1) + 'px,0) scale(' + this.cs.toFixed(3) + ')';
+          c.style.background = this.hot ? 'var(--al-lime)' : 'var(--al-ink)';
+          c.style.boxShadow = this.hot ? '0 0 0 1px var(--al-ink)' : '0 0 0 1px var(--al-paper)';
+        }
+      }
+      const p = this.previewRef.current;
+      if (p) {
+        this.px += (this.mx - this.px) * 0.14; this.py += (this.my - this.py) * 0.14;
+        const h = p.offsetHeight || 260;
+        p.style.transform = 'translate3d(' + (this.px + 28).toFixed(1) + 'px,' + (this.py - h / 2).toFixed(1) + 'px,0)';
+      }
+      this.raf = requestAnimationFrame(loop);
+    };
+    this.raf = requestAnimationFrame(loop);
+  }
+
+  componentWillUnmount() {
+    removeEventListener('resize', this.onResize);
+    if (this.ro) this.ro.disconnect();
+    removeEventListener('mousemove', this.onMove);
+    removeEventListener('scroll', this.onScroll);
+    cancelAnimationFrame(this.raf); clearTimeout(this.heroT); clearTimeout(this.copyT);
+    if (this.io) this.io.disconnect(); if (this.cio) this.cio.disconnect();
+  }
+
+  renderVals() {
+    const s = this.state, d = this.data;
+    const vw = typeof window !== 'undefined' ? window.innerWidth : s.vw, m = vw <= 760, t = vw <= 1100;
+    const L = {
+      metaCols: m ? 'repeat(2,minmax(0,1fr))' : 'repeat(5,minmax(0,1fr))',
+      line2Align: m ? 'left' : 'right', line2Pad: m ? '9vw' : '0',
+      rolePos: m ? 'static' : 'absolute', roleMt: m ? '28px' : '0',
+      heroFocus: m ? '1 / -1' : '1 / 4', focusOrder: m ? 2 : 0,
+      heroLead: m ? '1 / -1' : t ? '4 / 9' : '4 / 9', leadOrder: m ? 1 : 0,
+      heroFig: m ? '1 / -1' : t ? '9 / 13' : '10 / 13', figJustify: m ? 'end' : 'stretch', figW: m ? '62%' : '100%',
+      headLabel: t ? '1 / -1' : '1 / 4', headMain: t ? '1 / -1' : '4 / 13',
+      xList: t ? '1 / -1' : '1 / 9', xPanelDisplay: t ? 'none' : 'block',
+      xCols: m ? '40px minmax(0,1fr) 22px' : '64px minmax(0,1fr) auto 22px', periodAlign: m ? 'flex-start' : 'flex-end',
+      exCounterDisplay: t ? 'none' : 'block', exList: t ? '1 / -1' : '4 / 13', exCols: m ? '40px minmax(0,1fr) 22px' : '64px minmax(0,1fr) 22px',
+      workHead: t ? '1 / -1' : '1 / 9', workNote: t ? '1 / -1' : '10 / 13',
+      wCols: m ? '40px minmax(0,1fr) 22px' : '64px minmax(0,1.6fr) minmax(0,1fr) minmax(0,.5fr) 22px',
+      wAreas: m ? '"idx title arrow" ". disc disc"' : '"idx title disc plat arrow"', wPlatDisplay: m ? 'none' : 'block', wHeadDisplay: m ? 'none' : 'grid',
+      skillsNote: t ? 'none' : 'block', hard: m ? '1 / -1' : t ? '1 / 7' : '4 / 9', soft: m ? '1 / -1' : t ? '7 / 13' : '9 / 13',
+      aboutStat: m ? '1 / -1' : t ? '1 / 4' : '1 / 4', aboutMain: m ? '1 / -1' : t ? '4 / 13' : '4 / 12', aboutIndent: m ? '0' : 'clamp(48px,10vw,200px)',
+      aboutSub: m ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))',
+      eduA: m ? '1 / -1' : '1 / 4', eduB: m ? '1 / -1' : '4 / 9', eduC: m ? '1 / -1' : '9 / 13', eduCJustify: m ? 'start' : 'end',
+      ctaIndent: m ? '14vw' : '25%',
+      cCols: m ? 'minmax(0,1fr) 20px' : 'minmax(0,2fr) minmax(0,7fr) 20px', cAreas: m ? '"label arrow" "handle handle"' : '"label handle arrow"'
+    };
+
+    const xActive = t ? s.xOpen : s.xHover;
+    const xp = d.xp.map((x, i) => {
+      const on = xActive === i, dim = xActive != null && !on && !t;
+      return Object.assign({}, x, {
+        n: this.pad(i + 1, 3), delay: i * 90,
+        bullets: x.bullets.map((b, j) => ({ n: this.pad(j + 1, 2), t: b })),
+        areas: m ? (on ? '"idx title arrow" ". period period" ". panel panel"' : '"idx title arrow" ". period period"') : (on && t ? '"idx title period arrow" ". panel panel panel"' : '"idx title period arrow"'),
+        inline: t && on,
+        chipBg: on ? 'var(--accent)' : 'transparent', chipFg: on ? 'var(--on-accent)' : 'var(--fg-2)',
+        color: dim ? 'var(--fg-3)' : 'var(--fg-1)', shift: on && !m ? 'clamp(8px,1.6vw,28px)' : '0px',
+        rot: on ? (t ? '135deg' : '45deg') : '0deg', line: on ? 1 : 0,
+        panelOp: s.xHover === i ? 1 : 0, panelY: s.xHover === i ? '0px' : '16px', pe: s.xHover === i ? 'auto' : 'none',
+        enter: () => { if (!t && s.xHover !== i) this.setState({ xHover: i }); },
+        toggle: () => { if (t) this.setState({ xOpen: s.xOpen === i ? null : i }); }
+      });
+    });
+
+    const ex = d.ex.map((label, i) => {
+      const on = s.exHover === i, dim = s.exHover != null && !on;
+      return {
+        label, n: this.pad(i + 1, 3), delay: (i % 5) * 60,
+        color: dim ? 'var(--fg-3)' : 'var(--fg-1)', bg: on ? 'var(--accent)' : 'transparent',
+        numColor: on ? 'var(--fg-1)' : 'var(--fg-2)', shift: on ? 'clamp(8px,1.6vw,32px)' : '0px',
+        arrowOp: on ? 1 : 0, arrowX: on ? '0px' : '-12px',
+        enter: () => this.setState({ exHover: i, exLast: i })
+      };
+    });
+
+    const work = d.work.map((w, i) => {
+      const on = s.wHover === i, dim = s.wHover != null && !on;
+      return Object.assign({}, w, {
+        n: this.pad(i + 1, 3), delay: i * 90,
+        chipBg: on ? 'var(--accent)' : 'transparent', color: dim ? 'var(--fg-3)' : 'var(--fg-1)',
+        metaColor: on ? 'var(--fg-1)' : 'var(--fg-2)', shift: on ? 'clamp(8px,1.6vw,28px)' : '0px',
+        rot: on ? '45deg' : '0deg', line: on ? 1 : 0,
+        enter: () => this.setState({ wHover: i, wLast: i })
+      });
+    });
+    const pw = d.work[s.wLast];
+
+    const contacts = d.contacts.map((c, i) => {
+      const on = s.cHover === i;
+      return Object.assign({}, c, {
+        delay: i * 80, bg: on ? 'var(--accent)' : 'transparent', shift: on && !m ? '12px' : '0px',
+        rot: on ? '45deg' : '0deg', line: on ? 1 : 0,
+        enter: () => this.setState({ cHover: i })
+      });
+    });
+
+    const nav = (id) => this.scrollToId(id);
+    const e = React.createElement;
+    return {
+      L, focus: d.focus.map((label, i) => ({ label, n: '/ ' + this.pad(i + 1, 2) })),
+      headerH: s.compact ? '52px' : '72px',
+      hdrRole: vw >= 1100 ? 'UX/UI Designer' : '',
+      hdrStatus: vw >= 1380 ? 'Available for work' : vw >= 1100 ? 'Available' : '',
+      navItems: (vw >= 1280 || vw <= 900) ? [
+        { id: 'experience', label: 'Experience', count: '02' },
+        { id: 'expertise', label: 'Expertise', count: '03' },
+        { id: 'work', label: 'Work', count: '04' },
+        { id: 'about', label: 'About', count: '06' },
+        { id: 'contact', label: 'Contact', count: '08' }
+      ] : [
+        { id: 'work', label: 'Work', count: '04' },
+        { id: 'about', label: 'About', count: '06' },
+        { id: 'contact', label: 'Contact', count: '08' }
+      ],
+      active: s.active, navigate: nav, goWork: () => nav('work'),
+      showPortrait: this.props.showPortrait !== false,
+      figCls: 'al-figure al-figure--zoom al-figure--mono al-figure--reveal' + (s.heroIn ? ' al-figure--in' : ''),
+      tickerItems: ['Available for work', 'UX/UI Designer', 'Web / Mobile', 'B2B', 'SaaS', 'E-commerce', 'Product design'],
+      xp, xLeave: () => {},
+      ex, exLeave: () => this.setState({ exHover: null }),
+      exCur: this.pad(s.exLast + 1, 3), exCurLabel: d.ex[s.exLast],
+      work, wLeave: () => this.setState({ wHover: null }),
+      pv: { n: this.pad(s.wLast + 1, 2), area: pw.area, disc: pw.disc },
+      previewCls: 'al-cursor-preview' + (s.wHover != null ? ' is-on' : ''),
+      previewRef: this.previewRef, cursorRef: this.cursorRef, contactRef: this.contactRef,
+      marqueeItems: ['UX/UI Design', 'Product Design', 'Mobile App Design', 'Design Systems', 'Prototyping', 'Responsive Design'],
+      hard: d.hard.map((label, i) => ({ label, n: this.pad(i + 1, 2) })),
+      soft: d.soft.map((label, i) => ({ label, n: this.pad(i + 1, 2) })),
+      contactCls: 'al-reveal' + (s.contactIn || this.reduced ? ' al-reveal--in' : ''),
+      contacts, cLeave: () => this.setState({ cHover: null }),
+      copyIcon: s.copied ? 'check' : 'copy', copyLabel: s.copied ? 'Copied' : 'Copy email',
+      copyEmail: () => {
+        try { navigator.clipboard && navigator.clipboard.writeText('antonlut737@gmail.com'); } catch (err) {}
+        this.setState({ copied: true }); clearTimeout(this.copyT); this.copyT = setTimeout(() => this.setState({ copied: false }), 1800);
+      },
+      footerTagline: e(React.Fragment, null, 'UX/UI Designer for web ', e('em', null, 'and'), ' mobile products.'),
+      footerColumns: [
+        { label: '/Index', links: [
+          { label: 'Experience', onClick: (ev) => { ev.preventDefault(); nav('experience'); } },
+          { label: 'Expertise', onClick: (ev) => { ev.preventDefault(); nav('expertise'); } },
+          { label: 'Work', onClick: (ev) => { ev.preventDefault(); nav('work'); } },
+          { label: 'About', onClick: (ev) => { ev.preventDefault(); nav('about'); } }
+        ] },
+        { label: '/Social', links: [
+          { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lutsykanton', external: true },
+          { label: 'Telegram', href: 'https://t.me/antonlutsyk', external: true },
+          { label: 'Behance', href: 'https://www.behance.net/antonlutsyk', external: true },
+          { label: 'Email', href: 'mailto:antonlut737@gmail.com' }
+        ] }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

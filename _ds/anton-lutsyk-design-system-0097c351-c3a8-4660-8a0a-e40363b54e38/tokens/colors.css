@@ -1,0 +1,60 @@
+/* Anton Lutsyk — color tokens */
+:root{
+  /* base palette */
+  --al-paper:#F4F3EF;
+  --al-paper-2:#ECEBE6;
+  --al-paper-3:#E3E2DC;
+  --al-ink:#111111;
+  --al-ink-2:#2A2A28;
+  --al-stone:#6B6B67;
+  --al-stone-2:#9A9993;
+  --al-line:#D8D7D1;
+  --al-lime:#B8FF3D;
+  --al-lime-2:#A3EC22;
+  --al-ink-line:#2C2C2A;
+  --al-ink-stone:#8F8E89;
+
+  /* semantic — light (default) */
+  --bg:var(--al-paper);
+  --surface:var(--al-paper);
+  --surface-2:var(--al-paper-2);
+  --surface-3:var(--al-paper-3);
+  --surface-inverse:var(--al-ink);
+  --fg-1:var(--al-ink);
+  --fg-2:var(--al-stone);
+  --fg-3:var(--al-stone-2);
+  --fg-inverse:var(--al-paper);
+  --fg-inverse-2:var(--al-ink-stone);
+  --border:var(--al-line);
+  --border-strong:var(--al-ink);
+  --border-inverse:var(--al-ink-line);
+  --accent:var(--al-lime);
+  --accent-hover:var(--al-lime-2);
+  --on-accent:var(--al-ink);
+  --focus-ring:var(--al-ink);
+  --selection:var(--al-lime);
+
+  /* role aliases */
+  --text-body:var(--fg-1);
+  --text-muted:var(--fg-2);
+  --text-faint:var(--fg-3);
+  --text-link:var(--fg-1);
+  --surface-page:var(--bg);
+  --surface-placeholder:var(--surface-2);
+}
+
+/* inverse scope — footer, menu overlay, dark sections */
+.al-inverse{
+  --bg:var(--al-ink);
+  --surface:var(--al-ink);
+  --surface-2:#1C1C1B;
+  --surface-3:#262624;
+  --fg-1:var(--al-paper);
+  --fg-2:var(--al-ink-stone);
+  --fg-3:#5E5D59;
+  --border:var(--al-ink-line);
+  --border-strong:var(--al-paper);
+  --focus-ring:var(--al-lime);
+  background:var(--bg);
+  color:var(--fg-1);
+}

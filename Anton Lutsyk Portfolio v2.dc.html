@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Anton Lutsyk — UX/UI Designer</title>
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/motion.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/base.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/components/components.css">
+  <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/styles.css">
+  <script src="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    body{margin:0;background:#F4F3EF;overflow-x:hidden}
+    a{color:#111111}
+    a:hover{color:#111111}
+    @keyframes al-ring{0%{transform:scale(1);opacity:.6}70%,100%{transform:scale(2.9);opacity:0}}
+  </style>
+</helmet>
+
+<div style="font-family:var(--font-sans);background:var(--bg);color:var(--fg-1);overflow-x:clip;min-height:100vh">
+  <div style="position:fixed;top:0;left:0;right:0;z-index:60;--header-h:{{ headerH }}">
+    <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Header" items="{{ navItems }}" active="{{ active }}" on-navigate="{{ navigate }}" role="{{ hdrRole }}" status="{{ hdrStatus }}" sticky="{{ false }}" hint-size="100%,72px"></x-import>
+    <div style="position:absolute;inset:0;z-index:51;box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin);display:{{ L.statusDisp }};justify-content:flex-end;align-items:center;pointer-events:none">
+      <a href="#contact" onClick="{{ goContact }}" onMouseEnter="{{ stEnter }}" onMouseLeave="{{ stLeave }}" onFocus="{{ stEnter }}" onBlur="{{ stLeave }}" style="pointer-events:auto;position:relative;display:inline-flex;align-items:center;gap:10px;height:34px;padding:0 12px 0 14px;overflow:hidden;background:#111111;color:{{ stInk }};text-decoration:none;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;transition:color .45s var(--ease-out)">
+        <span aria-hidden="true" style="position:absolute;inset:0;background:var(--accent);transform-origin:50% 100%;transform:scaleY({{ stFill }});transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+        <i data-ring-host="1" data-ring-color="#B8FF3D" style="position:relative;display:inline-block;width:7px;height:7px;border-radius:50%;background:{{ stDot }};transition:background .45s var(--ease-out)"></i>
+        <span style="position:relative">Available for work</span>
+        <span style="position:relative;display:inline-flex;transform:rotate({{ stRot }});transition:transform .6s cubic-bezier(.16,1,.3,1)"><x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-up-right" size="{{ 14 }}" hint-size="14px,14px"></x-import></span>
+      </a>
+    </div>
+  </div>
+  <div style="height:72px"></div>
+
+  <!-- 01 INTRO -->
+  <section id="intro" ref="{{ introRef }}" data-screen-label="01 Intro" style="position:relative;scroll-margin-top:72px">
+    <div style="position:relative;z-index:1;box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+
+      <div data-intro="0" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:8px;padding:18px 0;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">
+        <span style="grid-column:{{ L.topA }}"><span style="color:var(--fg-2);font-weight:400">{ </span>UX/UI Designer<span style="color:var(--fg-2);font-weight:400"> }</span></span>
+        <span ref="{{ introTagRef }}" style="grid-column:5 / 9;display:{{ L.dHide }};color:var(--fg-2);will-change:opacity">01 / Intro — Portfolio ©26</span>
+        <span style="grid-column:{{ L.topC }};justify-self:end;font-variant-numeric:tabular-nums;color:var(--fg-2)">Ukraine — <span style="color:var(--fg-1)">{{ time }}</span></span>
+      </div>
+
+      <div ref="{{ heroRef }}" style="margin:clamp(72px,14vh,180px) 0 0;transform-origin:0 0;will-change:transform">
+      <h1 class="al-display" aria-label="Anton Lutsyk" style="margin:0;font-size:{{ L.nameSize }};letter-spacing:-0.065em;line-height:.84;white-space:nowrap">
+        <span class="al-line" data-drift="-1" data-depth="1" aria-hidden="true" style="padding-bottom:.2em;margin-bottom:-.2em;display:{{ L.lineDisp }}"><span><span data-ch="0" data-k="0.00" style="display:inline-block;transform:translateY(130%);will-change:transform">A</span><span data-ch="1" data-k="0.25" style="display:inline-block;transform:translateY(130%);will-change:transform">n</span><span data-ch="2" data-k="0.50" style="display:inline-block;transform:translateY(130%);will-change:transform">t</span><span data-ch="3" data-k="0.75" style="display:inline-block;transform:translateY(130%);will-change:transform">o</span><span data-ch="4" data-k="1.00" style="display:inline-block;transform:translateY(130%);will-change:transform">n</span></span></span><span aria-hidden="true" style="display:{{ L.spaceDisp }}"> </span><span class="al-line" data-drift="1" data-depth="-1.4" aria-hidden="true" style="padding-bottom:.2em;margin-bottom:-.2em;display:{{ L.lineDisp }};padding-left:{{ L.line2Pad }}"><span><span data-ch="5" data-k="0.00" style="display:inline-block;transform:translateY(130%);will-change:transform">L</span><span data-ch="6" data-k="0.20" style="display:inline-block;transform:translateY(130%);will-change:transform">u</span><span data-ch="7" data-k="0.40" style="display:inline-block;transform:translateY(130%);will-change:transform">t</span><span data-ch="8" data-k="0.60" style="display:inline-block;transform:translateY(130%);will-change:transform">s</span><span data-ch="9" data-k="0.80" style="display:inline-block;transform:translateY(130%);will-change:transform">y</span><span data-ch="10" data-k="1.00" style="display:inline-block;transform:translateY(130%);will-change:transform">k</span><sup data-ch="11" data-k="1" style="display:inline-block;transform:translateY(130%);font-size:.14em;font-weight:600;letter-spacing:0;vertical-align:top;position:relative;top:.5em;margin-left:.12em;color:var(--fg-2)">©26</sup></span></span>
+      </h1>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:40px;margin-top:clamp(40px,5vw,80px);padding-top:18px;border-top:1px solid var(--border-strong);align-items:start">
+        
+        <p data-intro="520" style="grid-column:{{ L.introLead }};order:{{ L.leadOrder }};margin:0;font-size:clamp(24px,2.5vw,40px);font-weight:500;letter-spacing:-0.035em;line-height:1.12;text-wrap:pretty">I've spent the last 2+ years designing products for web and mobile.</p>
+        <div data-intro="640" style="grid-column:{{ L.introContact }};order:3;display:flex;flex-direction:column;gap:14px;font-size:14px">
+          <span style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">Contact:</span>
+          <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.TextLink" href="mailto:antonlut737@gmail.com" icon="{{ null }}" hint-size="180px,20px">antonlut737@gmail.com</x-import>
+          <div style="display:flex;flex-wrap:wrap;gap:6px 18px">
+            <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.TextLink" href="https://www.linkedin.com/in/lutsykanton" external="{{ true }}" underline="{{ false }}" hint-size="70px,20px">LinkedIn</x-import>
+            <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.TextLink" href="https://t.me/antonlutsyk" external="{{ true }}" underline="{{ false }}" hint-size="70px,20px">Telegram</x-import>
+            <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.TextLink" href="https://www.behance.net/antonlutsyk" external="{{ true }}" underline="{{ false }}" hint-size="70px,20px">Behance</x-import>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:28px;margin-top:clamp(64px,9vw,160px);align-items:end">
+        
+        <div data-intro="820" style="grid-column:{{ L.focusCol }};order:1">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);margin-bottom:14px">Focus</div>
+          <div style="display:flex;flex-wrap:wrap;gap:0 .32em;font-size:var(--fs-h2);font-weight:800;letter-spacing:-0.05em;line-height:1">
+            <span>B2B</span><span style="color:var(--fg-3);font-weight:300">/</span><span>SaaS</span><span style="color:var(--fg-3);font-weight:300">/</span><span>E-commerce</span><span style="color:var(--fg-3);font-weight:300">/</span><span>Web</span><span style="color:var(--fg-3);font-weight:300">/</span><span>Mobile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 WORK / EXPERIENCE -->
+  <section id="work" data-screen-label="02 Work" style="scroll-margin-top:72px;padding-top:var(--section-y)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="02" label="Experience" rule="{{ true }}" hint-size="100%,28px"></x-import>
+      </div>
+      <h2 data-reveal="80" style="margin:clamp(28px,3vw,48px) 0 clamp(48px,6vw,104px);display:flex;align-items:flex-start;font-size:var(--fs-display);font-weight:800;letter-spacing:-0.06em;line-height:.84">Work</h2>
+
+      <div onMouseLeave="{{ xLeave }}">
+        <sc-for list="{{ xp }}" as="x" hint-placeholder-count="3">
+          <div data-reveal="{{ x.delay }}">
+            <div onMouseEnter="{{ x.enter }}" onFocus="{{ x.focus }}" onBlur="{{ xLeave }}" onClick="{{ x.toggle }}" onKeyDown="{{ x.key }}" role="button" tabIndex="0" aria-expanded="{{ x.expanded }}" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:20px;align-items:start;padding:clamp(28px,3.4vw,52px) 0;border-top:1px solid var(--border);cursor:pointer">
+              <div style="position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--fg-1);transform-origin:left;transform:scaleX({{ x.line }});transition:transform 1s var(--ease-out)"></div>
+              <span style="grid-column:{{ L.xIdx }};font-size:12px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums;padding-top:.5em"><span style="padding:3px 4px;margin-left:-4px;background:{{ x.chipBg }};transition:background .24s">/{{ x.n }}</span></span>
+              <div style="grid-column:{{ L.xTitle }};min-width:0">
+                <h3 style="margin:0;display:flex;align-items:flex-start;gap:.18em;font-size:clamp(40px,6.4vw,112px);font-weight:800;letter-spacing:-0.055em;line-height:.9;color:{{ x.color }};transform:translateX({{ x.shift }});transition:transform .7s var(--ease-out),color .6s var(--ease-out)">{{ x.company }}</h3>
+                <p style="margin:16px 0 0;font-size:15px;font-weight:500;color:var(--fg-2)">{{ x.role }}</p>
+              </div>
+              <dl style="grid-column:{{ L.xMeta }};margin:0;display:grid;grid-template-columns:{{ L.xMetaCols }};gap:16px var(--gutter);transform:translateX({{ x.metaShift }});transition:transform .7s var(--ease-out)">
+                <div><dt style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);margin-bottom:8px">Type</dt><dd style="margin:0;font-size:14px;font-weight:600;line-height:1.35">{{ x.type }}</dd></div>
+                <div><dt style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);margin-bottom:8px">Context</dt><dd style="margin:0;font-size:14px;font-weight:600;line-height:1.35">{{ x.context }}</dd></div>
+                <div><dt style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);margin-bottom:8px">Date</dt><dd style="margin:0;font-size:14px;font-weight:600;line-height:1.35;font-variant-numeric:tabular-nums">{{ x.date }}</dd></div>
+                <div style="grid-column:1 / -1;display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:{{ x.detailColor }}"><x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="{{ x.detailIcon }}" size="{{ 14 }}" hint-size="14px,14px"></x-import>{{ x.detailLabel }}</div>
+              </dl>
+              <div style="grid-column:{{ L.xPanel }};display:grid;grid-template-rows:{{ x.rows }};transition:grid-template-rows .8s var(--ease-out)">
+                <div style="overflow:hidden;min-height:0">
+                  <ol style="list-style:none;margin:0;padding:8px 0 0;display:grid;grid-template-columns:{{ L.bulletCols }};column-gap:var(--gutter);opacity:{{ x.panelOp }};transition:opacity .6s var(--ease-out)">
+                    <sc-for list="{{ x.bullets }}" as="b" hint-placeholder-count="5">
+                      <li style="display:grid;grid-template-columns:32px minmax(0,1fr);padding:8px 0;font-size:15px;line-height:1.5;text-wrap:pretty"><span style="font-size:11px;font-weight:600;color:var(--fg-2);padding-top:.35em;font-variant-numeric:tabular-nums">{{ b.n }}</span><span>{{ b.t }}</span></li>
+                    </sc-for>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 EXPERTISE -->
+  <section id="expertise" data-screen-label="03 Expertise" style="scroll-margin-top:72px;padding-top:var(--section-y)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="03" label="Expertise" rule="{{ true }}" hint-size="100%,28px"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);margin:clamp(40px,5vw,80px) 0 clamp(56px,7vw,120px)">
+        <p data-reveal="80" style="grid-column:{{ L.exLead }};margin:0;font-size:clamp(26px,3vw,50px);font-weight:600;letter-spacing:-0.035em;line-height:1.1;text-wrap:pretty">I design web and mobile products for B2B, SaaS and e-commerce. These four areas come up in every project I take on.</p>
+      </div>
+      <div onMouseLeave="{{ exLeave }}" style="display:grid;grid-template-columns:{{ L.exCols }};border-bottom:1px solid var(--border)">
+        <div data-reveal="0" onMouseEnter="{{ ex0.enter }}" style="display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:var(--gutter);align-items:start;min-height:{{ L.exCellH }};box-sizing:border-box;padding:clamp(20px,2vw,28px) {{ ex0.padR }} clamp(24px,2.6vw,36px) {{ ex0.padL }};border-top:1px solid var(--border);border-right:{{ ex0.br }}">
+          <div style="display:flex;flex-direction:column;height:100%;min-width:0">
+            <span style="font-size:12px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums"><span style="padding:3px 4px;margin-left:-4px;background:{{ ex0.chip }};transition:background .3s">/ 001</span></span>
+            <h3 style="margin:14px 0 0;font-size:clamp(30px,3vw,52px);font-weight:800;letter-spacing:-0.05em;line-height:.95">UX/UI Design</h3>
+            <ul style="list-style:none;margin:auto 0 0;padding:clamp(28px,3vw,48px) 0 0;display:flex;flex-direction:column;gap:8px;font-size:15px;font-weight:500">
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>User flows</li>
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>Wireframes</li>
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>High-fidelity UI</li>
+            </ul>
+          </div>
+          <svg viewBox="0 0 200 200" aria-hidden="true" style="width:{{ L.exSvg }};height:{{ L.exSvg }};color:{{ ex0.ink }};transform:scale({{ ex0.sc }});transform-origin:100% 0;transition:color .6s var(--ease-out),transform 1s var(--ease-out)"><rect x="8" y="62" width="44" height="76" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="16" y1="76" x2="44" y2="76" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="16" y1="86" x2="36" y2="86" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="16" y="98" width="28" height="22" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="52" y1="100" x2="78" y2="100" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><polyline points="72,95 78,100 72,105" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="78" y="62" width="44" height="76" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="86" y="72" width="28" height="28" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="86" y1="110" x2="114" y2="110" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="86" y1="120" x2="104" y2="120" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="122" y1="100" x2="148" y2="100" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><polyline points="142,95 148,100 142,105" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="148" y="62" width="44" height="76" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="156" y1="76" x2="184" y2="76" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="156" y="112" width="28" height="16" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/></svg>
+        </div>
+        <div data-reveal="80" onMouseEnter="{{ ex1.enter }}" style="display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:var(--gutter);align-items:start;min-height:{{ L.exCellH }};box-sizing:border-box;padding:clamp(20px,2vw,28px) {{ ex1.padR }} clamp(24px,2.6vw,36px) {{ ex1.padL }};border-top:1px solid var(--border);border-right:{{ ex1.br }}">
+          <div style="display:flex;flex-direction:column;height:100%;min-width:0">
+            <span style="font-size:12px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums"><span style="padding:3px 4px;margin-left:-4px;background:{{ ex1.chip }};transition:background .3s">/ 002</span></span>
+            <h3 style="margin:14px 0 0;font-size:clamp(30px,3vw,52px);font-weight:800;letter-spacing:-0.05em;line-height:.95">Product Design</h3>
+            <ul style="list-style:none;margin:auto 0 0;padding:clamp(28px,3vw,48px) 0 0;display:flex;flex-direction:column;gap:8px;font-size:15px;font-weight:500">
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>Digital products</li>
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>B2B</li>
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>SaaS</li>
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>E-commerce</li>
+            </ul>
+          </div>
+          <svg viewBox="0 0 200 200" aria-hidden="true" style="width:{{ L.exSvg }};height:{{ L.exSvg }};color:{{ ex1.ink }};transform:scale({{ ex1.sc }});transform-origin:100% 0;transition:color .6s var(--ease-out),transform 1s var(--ease-out)"><circle cx="100" cy="100" r="84" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><polygon points="100,16 184,100 100,184 16,100" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="58" y="58" width="84" height="84" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><circle cx="100" cy="100" r="42" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="16" y1="100" x2="184" y2="100" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="100" y1="16" x2="100" y2="184" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/></svg>
+        </div>
+        <div data-reveal="160" onMouseEnter="{{ ex2.enter }}" style="display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:var(--gutter);align-items:start;min-height:{{ L.exCellH }};box-sizing:border-box;padding:clamp(20px,2vw,28px) {{ ex2.padR }} clamp(24px,2.6vw,36px) {{ ex2.padL }};border-top:1px solid var(--border);border-right:{{ ex2.br }}">
+          <div style="display:flex;flex-direction:column;height:100%;min-width:0">
+            <span style="font-size:12px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums"><span style="padding:3px 4px;margin-left:-4px;background:{{ ex2.chip }};transition:background .3s">/ 003</span></span>
+            <h3 style="margin:14px 0 0;font-size:clamp(30px,3vw,52px);font-weight:800;letter-spacing:-0.05em;line-height:.95">Mobile &amp; Web</h3>
+            <ul style="list-style:none;margin:auto 0 0;padding:clamp(28px,3vw,48px) 0 0;display:flex;flex-direction:column;gap:8px;font-size:15px;font-weight:500">
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>Mobile apps</li>
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>Web applications</li>
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>Responsive design</li>
+            </ul>
+          </div>
+          <svg viewBox="0 0 200 200" aria-hidden="true" style="width:{{ L.exSvg }};height:{{ L.exSvg }};color:{{ ex2.ink }};transform:scale({{ ex2.sc }});transform-origin:100% 0;transition:color .6s var(--ease-out),transform 1s var(--ease-out)"><rect x="10" y="34" width="150" height="112" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="10" y1="52" x2="160" y2="52" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><circle cx="20" cy="43" r="3" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><circle cx="30" cy="43" r="3" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="24" y1="68" x2="96" y2="68" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="24" y1="80" x2="80" y2="80" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="24" y="94" width="64" height="38" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="124" y="68" width="62" height="114" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="146" y1="76" x2="164" y2="76" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="132" y="88" width="46" height="40" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="132" y1="140" x2="178" y2="140" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="132" y1="150" x2="164" y2="150" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/></svg>
+        </div>
+        <div data-reveal="240" onMouseEnter="{{ ex3.enter }}" style="display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:var(--gutter);align-items:start;min-height:{{ L.exCellH }};box-sizing:border-box;padding:clamp(20px,2vw,28px) {{ ex3.padR }} clamp(24px,2.6vw,36px) {{ ex3.padL }};border-top:1px solid var(--border);border-right:{{ ex3.br }}">
+          <div style="display:flex;flex-direction:column;height:100%;min-width:0">
+            <span style="font-size:12px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums"><span style="padding:3px 4px;margin-left:-4px;background:{{ ex3.chip }};transition:background .3s">/ 004</span></span>
+            <h3 style="margin:14px 0 0;font-size:clamp(30px,3vw,52px);font-weight:800;letter-spacing:-0.05em;line-height:.95">Design Systems</h3>
+            <ul style="list-style:none;margin:auto 0 0;padding:clamp(28px,3vw,48px) 0 0;display:flex;flex-direction:column;gap:8px;font-size:15px;font-weight:500">
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>Components</li>
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>Design systems</li>
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>Prototyping</li>
+              <li style="display:flex;align-items:center;gap:12px"><i aria-hidden="true" style="flex:none;width:4px;height:4px;background:var(--fg-1)"></i>UI consistency</li>
+            </ul>
+          </div>
+          <svg viewBox="0 0 200 200" aria-hidden="true" style="width:{{ L.exSvg }};height:{{ L.exSvg }};color:{{ ex3.ink }};transform:scale({{ ex3.sc }});transform-origin:100% 0;transition:color .6s var(--ease-out),transform 1s var(--ease-out)"><rect x="16" y="16" width="40" height="40" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><circle cx="100" cy="36" r="20" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="144" y="16" width="40" height="40" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><circle cx="36" cy="100" r="20" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="80" y="80" width="40" height="40" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><circle cx="164" cy="100" r="20" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="16" y="144" width="40" height="40" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><circle cx="100" cy="164" r="20" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><rect x="144" y="144" width="40" height="40" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="56" y1="36" x2="80" y2="36" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="120" y1="36" x2="144" y2="36" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="36" y1="56" x2="36" y2="80" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="164" y1="56" x2="164" y2="80" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="56" y1="100" x2="80" y2="100" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="120" y1="100" x2="144" y2="100" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="36" y1="120" x2="36" y2="144" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="164" y1="120" x2="164" y2="144" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="56" y1="164" x2="80" y2="164" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/><line x1="120" y1="164" x2="144" y2="164" stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 SELECTED WORK -->
+  <section id="selected" data-screen-label="04 Selected work" style="scroll-margin-top:72px;margin-top:var(--section-y);padding:clamp(56px,7vw,120px) 0;background-color:{{ swBg }};transition:background-color 1.1s cubic-bezier(.16,1,.3,1)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="04" label="Selected work" rule="{{ true }}" aside="(04) Projects" hint-size="100%,28px"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:24px;margin:clamp(28px,3vw,48px) 0 clamp(48px,6vw,104px);align-items:end">
+        <h2 data-reveal="80" style="grid-column:{{ L.swHead }};margin:0;font-size:var(--fs-mega);font-weight:800;letter-spacing:-0.065em;line-height:.84">Selected work</h2>
+        <div data-reveal="160" style="grid-column:{{ L.swNote }};display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.5;color:var(--fg-2)">
+          <span style="max-width:28ch">Four live sites. Links open in a new tab.</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);align-items:start">
+        <aside style="grid-column:1 / 6;display:{{ L.swPanelFlex }};flex-direction:column;position:sticky;top:96px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:4px">
+            <div style="display:flex;align-items:flex-start;gap:6px;font-variant-numeric:tabular-nums">
+              <span style="display:inline-flex;overflow:hidden;font-size:var(--fs-h1);font-weight:800;letter-spacing:-0.06em;line-height:.86"><span style="display:flex;flex-direction:column;transform:translateY({{ pvRoll }});transition:transform .9s var(--ease-out)"><span>01</span><span>02</span><span>03</span><span>04</span></span></span>
+              <span style="font-size:14px;font-weight:600;color:var(--fg-2);padding-top:.3em">— 04</span>
+            </div>
+            <span style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);text-align:right">{{ pvType }}</span>
+          </div>
+          <div data-follow="viewport" style="position:relative;margin-top:16px;aspect-ratio:9 / 5;overflow:hidden;background:var(--surface-2)">
+            <sc-for list="{{ projects }}" as="p" hint-placeholder-count="1">
+              <div style="position:absolute;inset:0;opacity:{{ p.op }};transition:opacity .9s var(--ease-out)">
+                <img src="{{ p.img }}" alt="{{ p.alt }}" decoding="async" style="width:100%;height:100%;object-fit:{{ p.fit }};object-position:{{ p.pos }};padding:{{ p.pad }};box-sizing:border-box;transform:scale({{ p.scale }});transition:transform 1.4s var(--ease-out)">
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;justify-content:space-between;gap:16px;margin-top:12px;font-size:12px;font-weight:600"></div>
+        </aside>
+
+        <div style="grid-column:{{ L.swList }};padding-left:{{ L.swListPad }}" onMouseLeave="{{ swLeave }}">
+          <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
+            <a href="{{ p.href }}" target="_blank" rel="noreferrer" data-proj="{{ $index }}" data-cursor="view" onMouseEnter="{{ p.enter }}" onFocus="{{ p.focus }}" onBlur="{{ swLeave }}" style="position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:clamp(20px,2.4vw,36px);min-height:{{ L.rowMinH }};box-sizing:border-box;padding:clamp(20px,2vw,28px) 0 clamp(28px,3vw,44px);border-top:1px solid var(--border);color:var(--fg-1);text-decoration:none">
+              <div style="position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--fg-1);transform-origin:left;transform:scaleX({{ p.line }});transition:transform 1s var(--ease-out)"></div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:12px;font-weight:600;letter-spacing:.04em;font-variant-numeric:tabular-nums">
+                <span><span style="padding:3px 4px;margin-left:-4px;background:{{ p.chipBg }};transition:background .3s">/ {{ p.n }}</span></span>
+                <span style="color:var(--fg-2)">{{ p.year }}</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.12em;min-width:0">
+                <span style="font-size:{{ L.projSize }};font-weight:800;letter-spacing:-0.065em;line-height:.84;white-space:nowrap;color:{{ p.color }};transform:translateX({{ p.shift }});transition:transform .8s var(--ease-out),color .6s var(--ease-out)">{{ p.name }}</span>
+                <span style="display:inline-flex;padding-top:.4em;opacity:{{ p.arrowOp }};transform:translate({{ p.arrowXY }});transition:opacity .4s,transform .8s var(--ease-out)"><x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-up-right" size="{{ 32 }}" hint-size="32px,32px"></x-import></span>
+              </div>
+              <sc-if value="{{ L.m }}" hint-placeholder-val="{{ false }}">
+                <div style="position:relative;aspect-ratio:16 / 10;overflow:hidden;background:var(--surface-2)">
+                  <img src="{{ p.img }}" alt="{{ p.alt }}" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:{{ p.fit }};object-position:{{ p.pos }};padding:{{ p.pad }};box-sizing:border-box">
+                </div>
+              </sc-if>
+              <dl style="margin:0;display:grid;grid-template-columns:{{ L.projMetaCols }};gap:14px var(--gutter)">
+                <div><dt style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);margin-bottom:8px">Type</dt><dd style="margin:0;font-size:14px;font-weight:600;color:{{ p.metaColor }};transition:color .4s">{{ p.type }}</dd></div>
+                <div><dt style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);margin-bottom:8px">Sector</dt><dd style="margin:0;font-size:14px;font-weight:600;color:{{ p.metaColor }};transition:color .4s">{{ p.sector }}</dd></div>
+                <div style="grid-column:{{ L.projLinkCol }}"><dt style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);margin-bottom:8px">Live</dt><dd style="margin:0;font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px;overflow-wrap:anywhere"><span>{{ p.url }}</span><x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-up-right" size="{{ 14 }}" hint-size="14px,14px"></x-import></dd></div>
+              </dl>
+            </a>
+          </sc-for>
+          <a href="https://www.behance.net/antonlutsyk" target="_blank" rel="noreferrer" data-cursor="view" onMouseEnter="{{ moreEnter }}" onMouseLeave="{{ moreLeave }}" onFocus="{{ moreEnter }}" onBlur="{{ moreLeave }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;padding:clamp(24px,3vw,40px) 0;border-top:1px solid var(--border);color:var(--fg-1);text-decoration:none">
+            <span style="font-size:var(--fs-h2);font-weight:800;letter-spacing:-0.05em;line-height:.95;transform:translateX({{ moreShift }});transition:transform .7s var(--ease-out)">More work</span>
+            <span style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600">behance.net/antonlutsyk<span style="display:inline-flex;transform:rotate({{ moreRot }});transition:transform .7s var(--ease-out)"><x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-up-right" size="{{ 20 }}" hint-size="20px,20px"></x-import></span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 ABOUT -->
+  <section id="about" data-screen-label="05 About" style="scroll-margin-top:72px;padding-top:var(--section-y)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="05" label="About" rule="{{ true }}" aside="{ I'm Anton, a UX/UI designer from Ukraine }" hint-size="100%,28px"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:48px;margin-top:clamp(40px,5vw,80px);align-items:start">
+        <div style="grid-column:{{ L.aboutFig }};order:{{ L.aboutFigOrder }}">
+          <figure class="{{ aboutFigCls }}" ref="{{ aboutFigRef }}" style="--ratio:1/1">
+            <div class="al-figure__frame"><img src="assets/portrait.jpg" alt="Portrait of Anton Lutsyk" width="800" height="800" loading="lazy" decoding="async" style="object-fit:contain;object-position:50% 50%"></div>
+            <figcaption class="al-figure__cap"></figcaption>
+          </figure>
+        </div>
+        <div style="grid-column:{{ L.aboutMain }};order:1;display:flex;flex-direction:column;gap:clamp(28px,3vw,48px)">
+          <div data-reveal="80" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">
+            <span style="font-weight:800;letter-spacing:.1em;color:var(--fg-1)">UX/UI Designer</span>
+            <span aria-hidden="true" style="width:28px;height:1px;background:var(--fg-1)"></span>
+            <span style="color:var(--fg-2)">Web + Mobile</span>
+          </div>
+          <h2 data-reveal="140" style="margin:0;font-size:clamp(40px,5.2vw,92px);font-weight:600;letter-spacing:-0.05em;line-height:.98;text-wrap:balance"><span style="font-weight:800;text-decoration-line:underline;text-decoration-color:var(--accent);text-decoration-thickness:.12em;text-underline-offset:.06em;text-decoration-skip-ink:none">UX/UI</span> for web and mobile products. Easy to use, hard to ignore.</h2>
+          <div data-reveal="200" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gutter);border-top:1px solid var(--border-strong)">
+            <div style="padding-top:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">/ 01</span><span style="font-size:clamp(22px,2vw,32px);font-weight:800;letter-spacing:-0.04em;line-height:1">Web</span><span style="font-size:14px;line-height:1.45;color:var(--fg-2)">Websites, web apps, SaaS and e-commerce</span></div>
+            <div style="padding-top:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">/ 02</span><span style="font-size:clamp(22px,2vw,32px);font-weight:800;letter-spacing:-0.04em;line-height:1">Mobile</span><span style="font-size:14px;line-height:1.45;color:var(--fg-2)">iOS and Android apps, store screenshots</span></div>
+          </div>
+          <p data-reveal="260" style="margin:0;max-width:70ch;font-size:16px;line-height:1.6;color:var(--fg-2);text-wrap:balance">I work in Figma from first flow to final screen: user flows, prototypes, interface design and the components that keep it consistent. Most of what I design ships as a web platform or a mobile app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 SKILLS -->
+  <section id="skills" data-screen-label="06 Skills" style="scroll-margin-top:72px;padding-top:var(--section-y)">
+        <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="06" label="Skills" rule="{{ true }}" hint-size="100%,28px"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:64px;margin-top:clamp(40px,5vw,72px);align-items:start">
+        <div data-reveal="80" class="al-skills" style="grid-column:{{ L.hard }}">
+          <div class="al-skills__head"><h3 class="al-skills__title">Hard skills</h3></div>
+          <ul class="al-skills__list">
+            <sc-for list="{{ hard }}" as="s" hint-placeholder-count="9">
+              <li class="al-skills__item" style="font-size:clamp(17px,1.5vw,22px);font-weight:600;letter-spacing:-0.02em"><span>{{ s.label }}</span></li>
+            </sc-for>
+          </ul>
+        </div>
+        <div data-reveal="160" class="al-skills" style="grid-column:{{ L.soft }}">
+          <div class="al-skills__head"><h3 class="al-skills__title">Soft skills</h3></div>
+          <ul class="al-skills__list">
+            <sc-for list="{{ soft }}" as="s" hint-placeholder-count="6">
+              <li class="al-skills__item" style="font-size:clamp(17px,1.5vw,22px);font-weight:600;letter-spacing:-0.02em"><span>{{ s.label }}</span></li>
+            </sc-for>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 EDUCATION -->
+  <section id="education" data-screen-label="07 Education" style="scroll-margin-top:72px;padding-top:var(--section-y-sm)">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="07" label="Education" rule="{{ true }}" hint-size="100%,28px"></x-import>
+      </div>
+      <div data-reveal="80" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:10px;align-items:baseline;padding:28px 0 30px">
+        <span style="grid-column:{{ L.xIdx }};font-size:12px;font-weight:600;color:var(--fg-2)">/001</span>
+        <span style="grid-column:{{ L.eduB }};font-size:var(--fs-h3);font-weight:700;letter-spacing:-0.03em;line-height:1.06">KPNU named after Ivan Ohienko</span>
+        <span style="grid-column:{{ L.eduC }};font-size:15px;font-weight:500;color:var(--fg-2)">Master's Degree, Computer Science</span>
+        <span style="grid-column:{{ L.eduD }};justify-self:{{ L.pYearJustify }};font-size:14px;font-weight:600;font-variant-numeric:tabular-nums">Sep 2019 — Jun 2025</span>
+      </div>
+      <div data-reveal="120" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:10px;align-items:baseline;padding:28px 0 30px;border-top:1px solid var(--border)">
+        <span style="grid-column:{{ L.xIdx }};font-size:12px;font-weight:600;color:var(--fg-2)">/002</span>
+        <span style="grid-column:{{ L.eduB }};font-size:var(--fs-h3);font-weight:700;letter-spacing:-0.03em;line-height:1.06">Hebron Academy of New Technologies</span>
+        <span style="grid-column:{{ L.eduC }};display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:500;color:var(--fg-2)"><span style="color:var(--fg-1)">Certificate, UX/UI Design</span><span>Also: Python Core Concepts, Business English, Teamwork and Presentation Skills</span></span>
+        <span style="grid-column:{{ L.eduD }};justify-self:{{ L.pYearJustify }};font-size:14px;font-weight:600;font-variant-numeric:tabular-nums">2024</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 CONTACT -->
+  <section id="contact" data-screen-label="08 Contact" style="scroll-margin-top:72px;padding:var(--section-y) 0">
+    <div style="box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="08" label="Contact" rule="{{ true }}" hint-size="100%,28px"></x-import>
+      </div>
+      <h2 ref="{{ contactRef }}" class="{{ contactCls }}" style="margin:clamp(40px,6vw,96px) 0 0;font-size:var(--fs-mega);font-weight:800;letter-spacing:-0.065em;line-height:.84">
+        <span class="al-line" style="--i:0;padding-bottom:.2em;margin-bottom:-.2em"><span>Let's</span></span>
+        <span class="al-line" style="--i:1;padding-bottom:.2em;margin-bottom:-.2em;padding-left:{{ L.ctaIndent }}"><span>work</span></span>
+        <span class="al-line" style="--i:2;padding-bottom:.2em;margin-bottom:-.2em"><span>together.</span></span>
+      </h2>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:32px;margin-top:clamp(56px,7vw,112px)">
+        <div data-reveal="0" style="grid-column:{{ L.cLabel }};display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+          <p style="margin:0;font-size:14px;line-height:1.5;color:var(--fg-2);max-width:26ch">Open to freelance projects and product roles. Email or message me directly.</p>
+          <button type="button" aria-live="polite" onClick="{{ copyEmail }}" style="display:inline-flex;align-items:center;gap:8px;background:none;border:0;padding:0;color:var(--fg-1);cursor:pointer;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase"><x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="{{ copyIcon }}" size="{{ 14 }}" hint-size="14px,14px"></x-import>{{ copyLabel }}</button>
+        </div>
+        <div style="grid-column:{{ L.cMain }};min-width:0">
+          
+          <div onMouseLeave="{{ cLeave }}">
+            <sc-for list="{{ contacts }}" as="c" hint-placeholder-count="4">
+              <div data-reveal="{{ c.delay }}">
+                <a href="{{ c.href }}" target="{{ c.target }}" rel="noreferrer" onMouseEnter="{{ c.enter }}" onFocus="{{ c.enter }}" onBlur="{{ cLeave }}" style="position:relative;display:grid;grid-template-columns:{{ L.cCols }};grid-template-areas:{{ L.cAreas }};column-gap:var(--gutter);row-gap:8px;align-items:baseline;padding:clamp(18px,2vw,28px) 0;border-top:1px solid var(--border);color:var(--fg-1);text-decoration:none">
+                  <div style="position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--fg-1);transform-origin:left;transform:scaleX({{ c.line }});transition:transform 1s var(--ease-out)"></div>
+                  <span style="grid-area:label;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">{{ c.label }}</span>
+                  <span style="grid-area:handle;min-width:0;overflow-wrap:anywhere;font-size:clamp(24px,3vw,48px);font-weight:700;letter-spacing:-0.04em;line-height:1.04;transform:translateX({{ c.shift }});transition:transform .7s var(--ease-out)"><span style="background:{{ c.bg }};padding:0 .06em;margin-left:-.06em;transition:background .3s">{{ c.handle }}</span></span>
+                  <span style="grid-area:arrow;justify-self:end;display:inline-flex;transform:rotate({{ c.rot }});transition:transform .7s var(--ease-out)"><x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-up-right" size="{{ 20 }}" hint-size="20px,20px"></x-import></span>
+                </a>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Footer" tagline="{{ footerTagline }}" columns="{{ footerColumns }}" year="{{ 2026 }}" note="Ukraine — Available for work" hint-size="100%,560px"></x-import>
+
+  <div ref="{{ cursorRef }}" aria-hidden="true" style="position:fixed;left:0;top:0;z-index:200;pointer-events:none;display:none;will-change:transform">
+    <div ref="{{ cursorInner }}" style="position:absolute;left:0;top:0;transform:translate(-50%,-50%);width:10px;height:10px;border-radius:50%;background:var(--al-ink);box-shadow:0 0 0 1px var(--al-paper);display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:nowrap;transition:width .45s var(--ease-out),height .45s var(--ease-out),border-radius .45s var(--ease-out),background .3s">
+      <span ref="{{ cursorLabel }}" style="display:flex;align-items:center;gap:6px;font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--al-paper);opacity:0;transition:opacity .3s">View <span style="color:var(--al-lime)">↗</span></span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;customCursor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Interaction&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;full&quot;,&quot;reduced&quot;],&quot;default&quot;:&quot;full&quot;,&quot;tsType&quot;:&quot;'full' | 'reduced'&quot;,&quot;section&quot;:&quot;Interaction&quot;}}">
+class Component extends DCLogic {
+  state = { vw: typeof window !== 'undefined' ? window.innerWidth : 1440, active: 'intro', secIdx: 0, compact: false, stHov: false, xHover: null, xOpen: 0, exHover: null, swHover: null, swActive: 0, more: false, cHover: null, copied: false, aboutIn: false, contactIn: false, time: '' };
+  cursorRef = React.createRef(); cursorInner = React.createRef(); cursorLabel = React.createRef();
+  contactRef = React.createRef(); aboutFigRef = React.createRef();
+  preRef = React.createRef(); preNumRef = React.createRef(); heroRef = React.createRef(); introRef = React.createRef(); spotRef = React.createRef(); gridRef = React.createRef(); introTagRef = React.createRef(); indRef = React.createRef(); indBarRef = React.createRef(); mBarRef = React.createRef();
+  secs = [['intro','Intro'],['work','Experience'],['expertise','Expertise'],['selected','Selected work'],['about','About'],['skills','Skills'],['education','Education'],['contact','Contact']];
+
+  data = {
+    xp: [
+      { company: 'Web Art Work', role: 'UX/UI Designer · Freelance', type: 'UX/UI Design', context: 'Freelance', date: 'Sep 2023 — Present', bullets: ['Designed mobile app interfaces in Figma, through to final UI.', 'Built prototypes, UI components and visual assets for mobile apps.', 'Made App Store and Google Play screenshots and promo graphics.', 'Turned client brand identities into app interfaces and marketing visuals.', 'Worked with clients in different industries, each with its own brand and requirements.'] },
+      { company: 'N1 Agency', role: 'UX/UI Designer | Graphic Designer', type: 'UX/UI / Graphic Design', context: 'Agency', date: 'Sep 2025 — Aug 2026', bullets: ['Designed mobile app UI in Figma, from early screens to final layouts.', 'Built prototypes, UI components and visual assets.', 'Made promo graphics for App Store and Google Play.', 'Adapted brand identities to mobile interfaces and visuals.', 'Worked on apps for different industries and product types.'] },
+      { company: 'HebronSoft', role: 'UX/UI Designer (Practice)', type: 'UX/UI Design', context: 'Practice', date: 'Sep 2024 — Jul 2024', bullets: ['Designed responsive interfaces for web applications.', 'Made wireframes, prototypes and final UI in Figma.', 'Built reusable components to keep the UI consistent.', 'Mapped out UX flows and interaction patterns.', 'Reviewed my designs with mentors and developers and reworked them based on their feedback.'] }
+    ],
+    ex: [
+      { title: 'UX/UI Design', items: ['User flows', 'Wireframes', 'High-fidelity UI'] },
+      { title: 'Product Design', items: ['Digital products', 'B2B', 'SaaS', 'E-commerce'] },
+      { title: 'Mobile & Web', items: ['Mobile apps', 'Web applications', 'Responsive design'] },
+      { title: 'Design Systems', items: ['Components', 'Design systems', 'Prototyping', 'UI consistency'] }
+    ],
+    projects: [
+      { name: 'CATE', bg: 'oklch(0.87 0.055 55)', type: 'Web platform', sector: 'Pet adoption', year: '—', href: 'https://antonlutsyk.github.io/CATE/', url: 'antonlutsyk.github.io/CATE', img: 'assets/shot-cate.png', alt: 'CATE — pet adoption homepage', fit: 'contain', pos: '50% 50%', pad: '0' },
+      { name: 'NORDHAUS', bg: 'oklch(0.86 0.045 145)', type: 'Website', sector: 'Architecture', year: '2026', href: 'https://antonlutsyk.github.io/NORDHAUS/', url: 'antonlutsyk.github.io/NORDHAUS', img: 'assets/shot-nordhaus.png', alt: 'NORDHAUS — architecture homepage', fit: 'contain', pos: '50% 50%', pad: '0' },
+      { name: 'FORME', bg: 'oklch(0.89 0.035 85)', type: 'E-commerce', sector: 'Furniture & objects', year: '2026', href: 'https://antonlutsyk.github.io/FORME/', url: 'antonlutsyk.github.io/FORME', img: 'assets/shot-forme.png', alt: 'FORME — furniture store homepage', fit: 'contain', pos: '50% 50%', pad: '0' },
+      { name: 'Verona GT', bg: 'oklch(0.84 0.035 250)', type: 'Website', sector: 'Automotive', year: '2026', href: 'https://antonlutsyk.github.io/VeronaGT/', url: 'antonlutsyk.github.io/VeronaGT', img: 'assets/shot-verona.png', alt: 'Verona GT — automotive homepage', fit: 'contain', pos: '50% 50%', pad: '0' }
+    ],
+    hard: ['UX/UI Design', 'Web Design', 'Mobile App Design', 'Product Design', 'B2B & SaaS Design', 'Prototyping', 'Wireframing', 'Design Systems', 'Responsive Design'],
+    soft: ['Client Communication', 'Problem Solving', 'Attention to Detail', 'Team Collaboration', 'Adaptability', 'Time Management'],
+    contacts: [
+      { label: 'Email', handle: 'antonlut737@gmail.com', href: 'mailto:antonlut737@gmail.com', target: '_self' },
+      { label: 'LinkedIn', handle: 'linkedin.com/in/lutsykanton', href: 'https://www.linkedin.com/in/lutsykanton', target: '_blank' },
+      { label: 'Telegram', handle: '@antonlutsyk', href: 'https://t.me/antonlutsyk', target: '_blank' },
+      { label: 'Behance', handle: 'behance.net/antonlutsyk', href: 'https://www.behance.net/antonlutsyk', target: '_blank' }
+    ]
+  };
+
+  pad(n, l) { return String(n).padStart(l, '0'); }
+  vw() { return typeof window !== 'undefined' ? window.innerWidth : this.state.vw; }
+  tick() {
+    try { this.setState({ time: new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Kyiv', hour: '2-digit', minute: '2-digit' }).format(new Date()) }); } catch (e) {}
+  }
+  scrollToId(id) {
+    if (id === 'home') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 64, behavior: 'smooth' });
+  }
+
+  ensureRings() {
+    if (this.reduced) return;
+    document.querySelectorAll('.al-header__status .al-dot, [data-ring-host]').forEach((d) => {
+      if (d.querySelector('[data-ring]')) return;
+      d.style.position = 'relative'; d.style.animation = 'none';
+      const r = document.createElement('i');
+      r.setAttribute('data-ring', '1'); r.setAttribute('aria-hidden', 'true');
+      r.style.cssText = 'position:absolute;inset:-1px;border-radius:50%;border:1px solid ' + (d.dataset.ringColor || '#111111') + ';pointer-events:none;animation:al-ring 2.8s cubic-bezier(.16,1,.3,1) infinite';
+      d.appendChild(r);
+    });
+  }
+  componentDidUpdate() { this.ensureRings(); }
+
+  componentDidMount() {
+    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches || this.props.motion === 'reduced';
+    this.fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    this.mx = innerWidth / 2; this.my = innerHeight / 2; this.cx = this.mx; this.cy = this.my; this.mode = 'dot'; this.hoverEl = null;
+    this.inWin = false; this.ppx = 0; this.ppy = 0; this.sx = innerWidth / 2; this.sy = innerHeight / 2; this.gx = this.sx; this.gy = this.sy; this.gE = 0; this.lastY = -1; this.indOn = false;
+    this.ensureRings();
+    const chars = Array.from(document.querySelectorAll('[data-ch]'));
+    if (this.reduced) { chars.forEach((c) => { c.style.transform = 'none'; }); if (this.indRef.current) this.indRef.current.style.transition = 'none'; }
+    const pre = this.preRef.current, PRE = this.reduced || !pre ? 0 : 1250;
+    if (pre && PRE === 0) pre.style.display = 'none';
+    if (PRE) {
+      const t0 = performance.now(), num = this.preNumRef.current;
+      const step = (now) => { const k = Math.min(1, (now - t0) / 1000), e = 1 - Math.pow(1 - k, 3); if (num) num.textContent = String(Math.round(e * 100)).padStart(3, '0'); if (k < 1) this.preRaf = requestAnimationFrame(step); };
+      this.preRaf = requestAnimationFrame(step);
+      this.preT = setTimeout(() => { pre.style.transform = 'translateY(-100%)'; setTimeout(() => { pre.style.display = 'none'; }, 1200); }, 1050);
+    }
+    this.preDelay = PRE;
+    if (!this.reduced) setTimeout(() => chars.forEach((c) => { const i = +c.dataset.ch; c.style.transition = 'transform 1.35s cubic-bezier(.16,1,.3,1) ' + (160 + i * 52) + 'ms'; c.style.transform = 'translateY(0)'; }), 30 + PRE * 0.82);
+    this.onLeaveWin = () => { this.inWin = false; };
+    document.documentElement.addEventListener('mouseleave', this.onLeaveWin);
+    this.onTouch = (e) => { const tt = e.touches && e.touches[0]; if (!tt || this.reduced) return; this.mx = tt.clientX; this.my = tt.clientY; if (this.gE < 0.05) { const r = this.introRef.current && this.introRef.current.getBoundingClientRect(); if (r) { this.gx = tt.clientX - r.left; this.gy = tt.clientY - r.top; } } this.gE = 1; this.inWin = true; };
+    if (this.introRef.current) { this.introRef.current.addEventListener('touchstart', this.onTouch, { passive: true }); this.introRef.current.addEventListener('touchmove', this.onTouch, { passive: true }); }
+    this.tick(); this.clock = setInterval(() => this.tick(), 20000);
+
+    this.onResize = () => { if (innerWidth !== this.state.vw) this.setState({ vw: innerWidth }); };
+    addEventListener('resize', this.onResize);
+    if (typeof ResizeObserver !== 'undefined') { this.ro = new ResizeObserver(this.onResize); this.ro.observe(document.documentElement); }
+    this.onResize();
+
+    this.onMove = (e) => {
+      const dist = Math.hypot(e.clientX - this.mx, e.clientY - this.my);
+      this.mx = e.clientX; this.my = e.clientY; this.inWin = true;
+      if (this.fine && window.scrollY < innerHeight * 1.6) this.gE = Math.min(1, this.gE + dist * 0.01);
+      const t = e.target && e.target.closest ? e.target : null;
+      const view = t && t.closest('[data-cursor="view"]');
+      const link = t && t.closest('a,button,[role="button"]');
+      this.mode = view ? 'view' : link ? 'link' : 'dot';
+      this.hoverEl = t ? t.closest('[data-follow]') : null;
+    };
+    this.onScroll = () => {
+      const compact = window.scrollY > 40;
+      const map = { intro: 'intro', work: 'work', expertise: 'work', selected: 'work', about: 'about', skills: 'about', education: 'about', contact: 'contact' };
+      let active = 'intro', secIdx = 0;
+      this.secs.forEach((sc, k) => { const el = document.getElementById(sc[0]); if (el && el.getBoundingClientRect().top < innerHeight * 0.4) secIdx = k; });
+      Object.keys(map).forEach((id) => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < innerHeight * 0.4) active = map[id]; });
+      const selEl = document.getElementById('selected'); let swIn = false;
+      if (selEl) { const sr = selEl.getBoundingClientRect(); swIn = sr.top < innerHeight * 0.55 && sr.bottom > innerHeight * 0.45; }
+      let swActive = this.state.swActive, best = Infinity;
+      document.querySelectorAll('[data-proj]').forEach((el) => { const r = el.getBoundingClientRect(); const dd = Math.abs(r.top + Math.min(r.height, innerHeight) / 2 - innerHeight / 2); if (dd < best) { best = dd; swActive = parseInt(el.getAttribute('data-proj'), 10) || 0; } });
+      if (compact !== this.state.compact || secIdx !== this.state.secIdx || active !== this.state.active || swActive !== this.state.swActive || swIn !== this.state.swIn) this.setState({ compact, active, swActive, secIdx, swIn });
+    };
+    addEventListener('mousemove', this.onMove, { passive: true });
+    addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+
+    this.io = new IntersectionObserver((ents) => {
+      ents.forEach((en) => { if (en.isIntersecting) { en.target.style.opacity = '1'; en.target.style.transform = 'none'; this.io.unobserve(en.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    if (!this.reduced) {
+      document.querySelectorAll('[data-intro]').forEach((el) => {
+        const d = parseInt(el.getAttribute('data-intro') || '0', 10);
+        el.style.opacity = '0'; el.style.transform = 'translateY(18px)';
+        el.style.transition = 'opacity 1.1s var(--ease-out) ' + (d + 200) + 'ms, transform 1.2s var(--ease-out) ' + (d + 200) + 'ms';
+        setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, 60 + (this.preDelay || 0) * 0.82);
+      });
+    }
+    const once = (ref, key, th) => {
+      if (!ref.current) { this.setState({ [key]: true }); return null; }
+      const o = new IntersectionObserver((en) => { if (en[0].isIntersecting) { this.setState({ [key]: true }); o.disconnect(); } }, { threshold: th });
+      o.observe(ref.current); return o;
+    };
+    this.o1 = once(this.contactRef, 'contactIn', 0.3);
+    this.o2 = once(this.aboutFigRef, 'aboutIn', 0.25);
+
+    const drift = Array.from(document.querySelectorAll('[data-drift]'));
+    const clamp = (v, a) => Math.max(-a, Math.min(a, v));
+    const loop = () => {
+      const y = window.scrollY, H = innerHeight, heroOn = y < H * 1.6, motion = !this.reduced;
+      let tpx = 0, tpy = 0;
+            this.ppx += (tpx - this.ppx) * 0.06; this.ppy += (tpy - this.ppy) * 0.06;
+      if (motion && heroOn) {
+        drift.forEach((el) => { const f = +el.dataset.drift, dep = +el.dataset.depth; el.style.transform = 'translate3d(' + (f * y * 0.12 + this.ppx * dep * 20).toFixed(2) + 'px,' + (this.ppy * dep * 9).toFixed(2) + 'px,0)'; });
+        if (y !== this.lastY) {
+          this.lastY = y;
+        }
+      }
+      const c = this.cursorRef.current, ci = this.cursorInner.current, cl = this.cursorLabel.current;
+      if (c && ci && cl) {
+        const on = this.fine && this.props.customCursor === true;
+        c.style.display = on ? 'block' : 'none';
+        if (on) {
+          this.cx += (this.mx - this.cx) * 0.24; this.cy += (this.my - this.cy) * 0.24;
+          c.style.transform = 'translate3d(' + this.cx.toFixed(1) + 'px,' + this.cy.toFixed(1) + 'px,0)';
+          if (this.mode !== this.lastMode) {
+            this.lastMode = this.mode;
+            const v = this.mode === 'view', l = this.mode === 'link';
+            ci.style.width = v ? '92px' : l ? '36px' : '10px';
+            ci.style.height = v ? '34px' : l ? '36px' : '10px';
+            ci.style.borderRadius = v ? '0' : '50%';
+            ci.style.background = l ? 'var(--al-lime)' : 'var(--al-ink)';
+            ci.style.boxShadow = l ? '0 0 0 1px var(--al-ink)' : '0 0 0 1px var(--al-paper)';
+            cl.style.opacity = v ? '1' : '0';
+          }
+        }
+      }
+      this.raf = requestAnimationFrame(loop);
+    };
+    this.raf = requestAnimationFrame(loop);
+  }
+
+  componentWillUnmount() {
+    removeEventListener('resize', this.onResize); removeEventListener('mousemove', this.onMove); removeEventListener('scroll', this.onScroll);
+    document.documentElement.removeEventListener('mouseleave', this.onLeaveWin);
+    if (this.introRef.current) { this.introRef.current.removeEventListener('touchstart', this.onTouch); this.introRef.current.removeEventListener('touchmove', this.onTouch); }
+    if (this.ro) this.ro.disconnect(); if (this.io) this.io.disconnect(); if (this.o1) this.o1.disconnect(); if (this.o2) this.o2.disconnect();
+    cancelAnimationFrame(this.raf); cancelAnimationFrame(this.preRaf); clearTimeout(this.preT); clearInterval(this.clock); clearTimeout(this.copyT);
+  }
+
+  renderVals() {
+    const s = this.state, d = this.data, vw = this.vw();
+    const m = vw <= 760, t = vw <= 1100;
+    const L = {
+      topA: m ? '1 / 7' : '1 / 5', topC: m ? '7 / 13' : '9 / 13', dHide: t ? 'none' : 'block', dGrid: m ? 'none' : 'grid',
+      nameSize: m ? '25.5vw' : 'clamp(72px,12.4vw,232px)', lineDisp: m ? 'block' : 'inline-block', spaceDisp: m ? 'none' : 'inline', line2Pad: m ? '8vw' : '0',
+      introMeta: m ? '1 / -1' : '1 / 4', metaOrder: m ? 2 : 0,
+      introLead: m ? '1 / -1' : t ? '4 / 10' : '5 / 10', leadOrder: m ? 1 : 0,
+      introContact: m ? '1 / -1' : t ? '10 / 13' : '10 / 13',
+      scrollCol: m ? '1 / -1' : '1 / 4', scrollOrder: m ? 2 : 0, focusCol: m ? '1 / -1' : t ? '4 / 13' : '5 / 13',
+      xIdx: m ? '1 / -1' : '1 / 3', xTitle: m ? '1 / -1' : t ? '3 / 13' : '3 / 9', xMeta: m ? '1 / -1' : t ? '3 / 13' : '9 / 13', xPanel: m ? '1 / -1' : '3 / 13',
+      xMetaCols: m ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))',
+      bulletCols: m ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))',
+      exLead: m ? '1 / -1' : t ? '1 / -1' : '3 / 11', exCols: m ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))', exCellH: m ? '0' : 'clamp(280px,24vw,360px)', exSvg: m ? '88px' : 'clamp(120px,11vw,184px)', exList: m ? '1 / -1' : '9 / 13',
+      swHead: t ? '1 / -1' : '1 / 9', swNote: t ? '1 / -1' : '10 / 13',
+      pIdx: m ? '1 / -1' : '1 / 3', pTitle: m ? '1 / -1' : '3 / 9', pType: m ? '1 / 5' : '9 / 11', pCtx: m ? '5 / 9' : '11 / 12', pYear: m ? '9 / 13' : '12 / 13', pYearJustify: m ? 'start' : 'end',
+      moreTitle: m ? '1 / -1' : '3 / 9', moreMeta: m ? '1 / -1' : '9 / 13',
+      aboutFig: m ? '3 / 13' : t ? '1 / 5' : '1 / 5', aboutFigOrder: m ? 2 : 0, aboutMain: m ? '1 / -1' : t ? '6 / 13' : '6 / 13',
+      aboutMetaCols: m ? 'repeat(2,minmax(0,1fr))' : 'repeat(5,minmax(0,1fr))',
+      hard: m ? '1 / -1' : t ? '1 / 7' : '3 / 8', soft: m ? '1 / -1' : t ? '7 / 13' : '9 / 13',
+      eduB: m ? '1 / -1' : '3 / 8', eduC: m ? '1 / -1' : '8 / 11', eduD: m ? '1 / -1' : '11 / 13',
+      ctaIndent: m ? '12vw' : '33.3%', cLabel: m ? '1 / -1' : '1 / 4', statusDisp: vw > 900 ? 'flex' : 'none', indDisp: m ? 'none' : 'flex', mBarDisp: m ? 'block' : 'none', cMain: m ? '1 / -1' : '4 / 13',
+      cCols: m ? 'minmax(0,1fr) 20px' : 'minmax(0,2fr) minmax(0,7fr) 20px', cAreas: m ? '"label arrow" "handle handle"' : '"label handle arrow"'
+    };
+
+    const touch = !this.fine;
+    const xp = d.xp.map((x, i) => {
+      const hov = s.xHover === i, open = s.xOpen === i, dim = s.xHover != null && !hov;
+      return Object.assign({}, x, {
+        n: this.pad(i + 1, 3), delay: i * 90, bullets: x.bullets.map((b, j) => ({ n: this.pad(j + 1, 2), t: b })),
+        chipBg: hov || open ? 'var(--accent)' : 'transparent', color: dim ? 'var(--fg-3)' : 'var(--fg-1)',
+        shift: hov && !m ? 'clamp(8px,1.4vw,24px)' : '0px', metaShift: hov && !m ? '-8px' : '0px',
+        arrowOp: hov || (m && open) ? 1 : 0, arrowXY: hov ? '0px,0px' : '-10px,10px', rot: open ? '90deg' : '0deg', line: hov ? 1 : 0,
+        rows: open ? '1fr' : '0fr', panelOp: open ? 1 : 0,
+        detailIcon: open ? 'minus' : 'plus', detailLabel: open ? 'Close details' : 'Details', detailColor: open || hov ? 'var(--fg-1)' : 'var(--fg-2)',
+        enter: () => { if (!touch && s.xHover !== i) this.setState({ xHover: i }); },
+        toggle: () => this.setState({ xOpen: s.xOpen === i ? null : i }),
+        expanded: open, focus: () => { if (s.xHover !== i) this.setState({ xHover: i }); },
+        key: (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); this.setState({ xOpen: s.xOpen === i ? null : i }); } }
+      });
+    });
+
+    const ex = d.ex.map((e, i) => {
+      const on = s.exHover === i, dim = s.exHover != null && !on, left = i % 2 === 0;
+      return Object.assign({}, e, {
+        chip: on ? 'var(--accent)' : 'transparent', ink: on ? 'var(--fg-1)' : 'var(--fg-3)', sc: on ? 1.04 : 1,
+        padL: m || left ? '0px' : 'clamp(20px,2.4vw,40px)', padR: m || !left ? '0px' : 'clamp(20px,2.4vw,40px)', br: !m && left ? '1px solid var(--border)' : '0',
+        n: this.pad(i + 1, 3), delay: i * 80, color: dim ? 'var(--fg-3)' : 'var(--fg-1)', bg: on ? 'var(--accent)' : 'transparent',
+        numColor: on ? 'var(--fg-1)' : 'var(--fg-2)', listColor: dim ? 'var(--fg-3)' : on ? 'var(--fg-1)' : 'var(--fg-2)',
+        shift: on && !m ? 'clamp(8px,1.4vw,24px)' : '0px', enter: () => this.setState({ exHover: i })
+      });
+    });
+
+    Object.assign(L, {
+      m, swHead: t ? '1 / -1' : '1 / 10', swNote: t ? '1 / -1' : '10 / 13',
+      swPanel: m ? 'none' : 'block', swPanelFlex: m ? 'none' : 'flex', swList: m ? '1 / -1' : '6 / 13', swListPad: m ? '0' : 'clamp(0px,2vw,40px)',
+      rowMinH: m ? '0' : 'min(64vh,620px)', projSize: m ? '17.5vw' : t ? '8.2vw' : 'clamp(64px,8.4vw,152px)',
+      projMetaCols: m ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))', projLinkCol: m ? '1 / -1' : 'auto'
+    });
+    const act = m ? -1 : (s.swHover != null ? s.swHover : s.swActive);
+    const projects = d.projects.map((p, i) => {
+      const on = act === i, hov = s.swHover === i;
+      return Object.assign({}, p, {
+        n: this.pad(i + 1, 3),
+        color: m || on ? 'var(--fg-1)' : 'var(--fg-3)', chipBg: on ? 'var(--accent)' : 'transparent',
+        shift: on && !m ? 'clamp(8px,1.4vw,24px)' : '0px', arrowOp: on || m ? 1 : 0, arrowXY: on || m ? '0px,0px' : '-12px,12px',
+        line: on ? 1 : 0, metaY: on ? '0px' : '6px', metaColor: m || on ? 'var(--fg-1)' : 'var(--fg-2)', urlBg: hov ? 'var(--accent)' : 'transparent',
+        op: on ? 1 : 0,
+        scale: on ? (hov ? 1.03 : 1) : 1.06,
+        enter: () => { if (this.fine) this.setState({ swHover: i }); },
+        focus: () => { if (!m) this.setState({ swHover: i }); }
+      });
+    });
+    const pa = d.projects[Math.max(0, act)];
+    const colIdx = s.swHover != null ? s.swHover : s.swActive;
+    const swBg = s.swIn ? d.projects[colIdx].bg : 'var(--bg)';
+
+    const contacts = d.contacts.map((c, i) => {
+      const on = s.cHover === i;
+      return Object.assign({}, c, { delay: i * 80, bg: on ? 'var(--accent)' : 'transparent', shift: on && !m ? '12px' : '0px', rot: on ? '45deg' : '0deg', line: on ? 1 : 0, enter: () => this.setState({ cHover: i }) });
+    });
+
+    const nav = (id) => this.scrollToId(id);
+    const e = React.createElement;
+    return {
+      L, time: s.time || '—', swBg, preRef: this.preRef, preNumRef: this.preNumRef,
+      heroRef: this.heroRef, introRef: this.introRef, spotRef: this.spotRef, gridRef: this.gridRef, introTagRef: this.introTagRef, indRef: this.indRef, indBarRef: this.indBarRef, mBarRef: this.mBarRef,
+      sections: this.secs.map((sc, k) => ({ n: this.pad(k + 1, 2), label: sc[1] })),
+      secRoll: 'calc(' + (-s.secIdx) + ' * 1.2em)', secTrans: this.reduced ? 'none' : 'transform .9s cubic-bezier(.16,1,.3,1)',
+      headerH: s.compact ? '52px' : '72px', hdrStatus: vw > 900 ? '' : 'Available for work',
+      stEnter: () => this.setState({ stHov: true }), stLeave: () => this.setState({ stHov: false }),
+      goContact: (ev) => { ev.preventDefault(); this.scrollToId('contact'); },
+      stFill: s.stHov ? 1 : 0, stInk: s.stHov ? '#111111' : '#F4F3EF', stDot: s.stHov ? '#111111' : 'var(--accent)', stRot: s.stHov ? '45deg' : '0deg', hdrRole: vw >= 1100 ? 'UX/UI Designer' : '',
+      navItems: [{ id: 'work', label: 'Work' }, { id: 'about', label: 'About' }, { id: 'contact', label: 'Contact' }],
+      active: s.active, navigate: nav,
+      xp, xLeave: () => this.setState({ xHover: null }),
+      ex0: ex[0], ex1: ex[1], ex2: ex[2], ex3: ex[3], ex, exLeave: () => this.setState({ exHover: null }),
+      projects, swLeave: () => this.setState({ swHover: null }),
+      pvN: this.pad(Math.max(0, act) + 1, 2), pvName: pa.name, pvUrl: pa.url, pvType: pa.type + ' — ' + pa.sector,
+      pvRoll: 'calc(' + (-Math.max(0, act)) + ' * .86em)',
+      moreEnter: () => this.setState({ more: true }), moreLeave: () => this.setState({ more: false }),
+      moreShift: s.more && !m ? 'clamp(8px,1.4vw,24px)' : '0px', moreRot: s.more ? '45deg' : '0deg',
+      aboutFigRef: this.aboutFigRef, aboutFigCls: 'al-figure al-figure--zoom al-figure--mono al-figure--reveal' + (s.aboutIn || this.reduced ? ' al-figure--in' : ''),
+      aboutMeta: [{ k: 'Experience', v: '2+ years' }, { k: 'Area', v: 'B2B' }, { k: 'Area', v: 'SaaS' }, { k: 'Area', v: 'E-commerce' }, { k: 'Platform', v: 'Mobile' }],
+      marqueeItems: ['UX/UI Design', 'Product Design', 'Mobile App Design', 'Design Systems', 'Prototyping', 'Responsive Design'],
+      hard: d.hard.map((label, i) => ({ label, n: this.pad(i + 1, 2) })),
+      soft: d.soft.map((label, i) => ({ label, n: this.pad(i + 1, 2) })),
+      contactRef: this.contactRef, contactCls: 'al-reveal' + (s.contactIn || this.reduced ? ' al-reveal--in' : ''),
+      contacts, cLeave: () => this.setState({ cHover: null }),
+      copyIcon: s.copied ? 'check' : 'copy', copyLabel: s.copied ? 'Copied' : 'Copy email',
+      copyEmail: () => {
+        try { navigator.clipboard && navigator.clipboard.writeText('antonlut737@gmail.com'); } catch (err) {}
+        this.setState({ copied: true }); clearTimeout(this.copyT); this.copyT = setTimeout(() => this.setState({ copied: false }), 1800);
+      },
+      cursorRef: this.cursorRef, cursorInner: this.cursorInner, cursorLabel: this.cursorLabel,
+      footerTagline: e(React.Fragment, null, 'Anton Lutsyk designs products for web and mobile.'),
+      footerColumns: [
+        { label: '/Content', links: [
+          { label: 'Work', onClick: (ev) => { ev.preventDefault(); nav('work'); } },
+          { label: 'Selected work', onClick: (ev) => { ev.preventDefault(); nav('selected'); } },
+          { label: 'About', onClick: (ev) => { ev.preventDefault(); nav('about'); } },
+          { label: 'Download CV', href: 'assets/Anton-Lutsyk-CV.pdf', external: true }
+        ] },
+        { label: '/Social', links: [
+          { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lutsykanton', external: true },
+          { label: 'Telegram', href: 'https://t.me/antonlutsyk', external: true },
+          { label: 'Behance', href: 'https://www.behance.net/antonlutsyk', external: true },
+          { label: 'Email', href: 'mailto:antonlut737@gmail.com' }
+        ] }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

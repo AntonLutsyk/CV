@@ -1,0 +1,15 @@
+/* Base element defaults */
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg-1);font-family:var(--font-sans);font-size:var(--fs-body);line-height:var(--lh-body);letter-spacing:var(--tr-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--selection);color:var(--on-accent)}
+a{color:var(--text-link);text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{color:var(--fg-1)}
+:focus-visible{outline:1px solid var(--focus-ring);outline-offset:3px}
+img{max-width:100%;display:block}
+.al-grid{display:grid;grid-template-columns:repeat(var(--grid-cols),minmax(0,1fr));column-gap:var(--gutter)}
+.al-container{box-sizing:border-box;width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:var(--margin)}
+.al-label{font-family:var(--font-sans);font-size:var(--fs-label);font-weight:var(--fw-semibold);line-height:var(--lh-label);letter-spacing:var(--tr-label);text-transform:uppercase}
+.al-serif{font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:-0.02em}
+.al-tabular{font-variant-numeric:tabular-nums}
+.al-rule{border:0;border-top:1px solid var(--border);margin:0}
+.al-rule--strong{border-top-color:var(--border-strong)}

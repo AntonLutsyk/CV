@@ -1,0 +1,35 @@
+/* Anton Lutsyk — spacing, grid, borders */
+:root{
+  --sp-1:4px;
+  --sp-2:8px;
+  --sp-3:12px;
+  --sp-4:16px;
+  --sp-5:24px;
+  --sp-6:32px;
+  --sp-7:48px;
+  --sp-8:64px;
+  --sp-9:96px;
+  --sp-10:128px;
+  --sp-11:192px;
+
+  /* 12-col editorial grid */
+  --grid-cols:12; /* @kind other */
+  --gutter:clamp(12px,1.6vw,28px); /* @kind spacing */
+  --margin:clamp(20px,3.6vw,64px);
+  --max-w:1760px;
+  --measure:62ch; /* @kind spacing */
+  --section-y:clamp(96px,13vw,224px); /* @kind spacing */
+  --section-y-sm:clamp(64px,8vw,128px); /* @kind spacing */
+  --header-h:64px;
+
+  /* borders & radii — hairlines, square corners */
+  --hairline:1px; /* @kind other */
+  --border-1:1px solid var(--border); /* @kind other */
+  --border-strong-1:1px solid var(--border-strong); /* @kind other */
+  --radius-0:0px;
+  --radius-xs:2px;
+  --radius-full:999px;
+
+  /* elevation — intentionally none */
+  --shadow-none:none;
+}
