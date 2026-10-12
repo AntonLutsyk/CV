@@ -9,8 +9,8 @@
 <x-dc>
 <helmet>
   <title>Anton Lutsyk — UX/UI Designer</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="icon" type="image/png" href="assets/favicon-v2.png">
+  <link rel="apple-touch-icon" href="assets/favicon-v2.png">
   <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/fonts.css">
   <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/colors.css">
   <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/tokens/typography.css">
@@ -26,13 +26,18 @@
     body{margin:0;background:#F4F3EF;overflow-x:hidden}
     a{color:#111111}
     a:hover{color:#111111}
+    .al-header__brand sup:empty{display:none}
+    .al-header__brand{grid-row:1;position:relative;z-index:1}
+    .al-header__nav{grid-column:1/-1;grid-row:1;justify-self:center}
+    .al-menu .al-header__brand img{filter:invert(1)}
+    .al-seclabel--rule{border-top-color:rgba(17,17,17,.18)}
     @keyframes al-ring{0%{transform:scale(1);opacity:.6}70%,100%{transform:scale(2.9);opacity:0}}
   </style>
 </helmet>
 
 <div style="font-family:var(--font-sans);background:var(--bg);color:var(--fg-1);overflow-x:clip;min-height:100vh">
   <div style="position:fixed;top:0;left:0;right:0;z-index:60;--header-h:{{ headerH }}">
-    <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Header" items="{{ navItems }}" active="{{ active }}" on-navigate="{{ navigate }}" role="{{ hdrRole }}" status="{{ hdrStatus }}" sticky="{{ false }}" hint-size="100%,72px"></x-import>
+    <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Header" name="{{ brandLogo }}" mark="" items="{{ navItems }}" active="{{ active }}" on-navigate="{{ navigate }}" role="" status="{{ hdrStatus }}" sticky="{{ false }}" hint-size="100%,72px"></x-import>
     <div style="position:absolute;inset:0;z-index:51;box-sizing:border-box;max-width:var(--max-w);margin:0 auto;padding:0 var(--margin);display:{{ L.statusDisp }};justify-content:flex-end;align-items:center;pointer-events:none">
       <a href="#contact" onClick="{{ goContact }}" onMouseEnter="{{ stEnter }}" onMouseLeave="{{ stLeave }}" onFocus="{{ stEnter }}" onBlur="{{ stLeave }}" style="pointer-events:auto;position:relative;display:inline-flex;align-items:center;gap:10px;height:34px;padding:0 12px 0 14px;overflow:hidden;background:#111111;color:{{ stInk }};text-decoration:none;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;transition:color .45s var(--ease-out)">
         <span aria-hidden="true" style="position:absolute;inset:0;background:var(--accent);transform-origin:50% 100%;transform:scaleY({{ stFill }});transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
@@ -61,7 +66,7 @@
         <a href="#selected" data-intro="700" onClick="{{ goWork }}" style="pointer-events:auto;order:{{ L.scrollOrd }};display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--fg-1);text-decoration:none;padding-bottom:.3em">Selected work <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-down" size="{{ 16 }}" hint-size="16px,16px"></x-import></a>
         <span data-intro="600" aria-hidden="true" style="display: {{ L.yearDisp }}; position: absolute; left: 0; right: 0; text-align: center; bottom: clamp(20px,3vh,36px); font-size: clamp(32px,5.6vw,104px); font-weight: 800; letter-spacing: -0.055em; line-height: .84; color: var(--fg-3); font-variant-numeric: tabular-nums">2026</span>
         <h1 class="al-display" aria-label="Anton Lutsyk — Resume" style="order:{{ L.wordOrd }};margin:0;font-size:{{ L.wordSize }};letter-spacing:-0.065em;line-height:.84;white-space:nowrap">
-          <span class="al-line" data-drift="1" data-depth="1" aria-hidden="true" style="display:inline-block;padding-top:.16em;margin-top:-.16em;padding-bottom:.2em;margin-bottom:-.2em;padding-right:.12em;margin-right:-.12em"><span><span data-ch="0" style="display:inline-block;transform:translateY(130%);will-change:transform">R</span><span data-ch="1" style="display:inline-block;transform:translateY(130%);will-change:transform">e</span><span data-ch="2" style="display:inline-block;transform:translateY(130%);will-change:transform">s</span><span data-ch="3" style="display:inline-block;transform:translateY(130%);will-change:transform">u</span><span data-ch="4" style="display:inline-block;transform:translateY(130%);will-change:transform">m</span><span data-ch="5" style="display:inline-block;transform:translateY(130%);will-change:transform">e</span></span></span>
+          <span class="al-line" data-drift="1" data-depth="1" aria-hidden="true" style="display:inline-block;padding-top:.16em;margin-top:-.16em;padding-bottom:.3em;margin-bottom:-.3em;padding-right:.12em;margin-right:-.12em"><span><span data-ch="0" style="display:inline-block;transform:translateY(130%);will-change:transform">R</span><span data-ch="1" style="display:inline-block;transform:translateY(130%);will-change:transform">e</span><span data-ch="2" style="display:inline-block;transform:translateY(130%);will-change:transform">s</span><span data-ch="3" style="display:inline-block;transform:translateY(130%);will-change:transform">u</span><span data-ch="4" style="display:inline-block;transform:translateY(130%);will-change:transform">m</span><span data-ch="5" style="display:inline-block;transform:translateY(130%);will-change:transform">e</span></span></span>
         </h1>
       </div>
       </div>
@@ -96,7 +101,11 @@
           <div data-xslide="{{ x.dir }}" data-xi="{{ $index }}">
             <div onMouseEnter="{{ x.enter }}" onFocus="{{ x.focus }}" onBlur="{{ xLeave }}" onClick="{{ x.toggle }}" onKeyDown="{{ x.key }}" role="button" tabIndex="0" aria-expanded="{{ x.expanded }}" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:20px;align-items:start;padding:clamp(28px,3.4vw,52px) 0;border-top:{{ x.bt }};cursor:pointer">
               <div style="position:absolute;left:0;right:0;top:-1px;height:1px;display:{{ x.lineDisp }};background:var(--fg-1);transform-origin:left;transform:scaleX({{ x.line }});transition:transform 1s var(--ease-out)"></div>
-                            <div style="grid-column:{{ L.xTitle }};min-width:0">
+              <div aria-hidden="true" style="grid-column:{{ L.xIdx }};display:flex;justify-content:space-between;align-items:flex-start;padding-right:{{ L.xIdxPad }};min-width:0">
+                <span style="font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--fg-2);font-variant-numeric:tabular-nums;padding-top:4px">{{ x.n2 }}</span>
+                <span style="width:1px;height:clamp(64px,7vw,112px);background:{{ x.idxLine }};transition:background .6s var(--ease-out)"></span>
+              </div>
+              <div style="grid-column:{{ L.xTitle }};min-width:0">
                 <h3 style="margin:0;display:flex;align-items:flex-start;gap:.18em;font-size:clamp(40px,6.4vw,112px);font-weight:800;letter-spacing:-0.055em;line-height:.9;color:{{ x.color }};transform:translateX({{ x.shift }});transition:transform .7s var(--ease-out),color .6s var(--ease-out)">{{ x.company }}</h3>
                 <p style="margin:16px 0 0;font-size:15px;font-weight:500;color:var(--fg-2)">{{ x.role }}</p>
               </div>
@@ -247,11 +256,7 @@
           </figure>
         </div>
         <div style="grid-column:{{ L.aboutMain }};order:1;display:flex;flex-direction:column;gap:clamp(28px,3vw,48px)">
-          <div data-reveal="80" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">
-            <span style="font-weight:800;letter-spacing:.1em;color:var(--fg-1)">UX/UI Designer</span>
-            <span aria-hidden="true" style="color:var(--fg-3)">/</span>
-            <span style="color:var(--fg-2)">Web + Mobile</span>
-          </div>
+          
           <h2 data-reveal="140" style="margin:0;font-size:clamp(40px,5.2vw,92px);font-weight:600;letter-spacing:-0.05em;line-height:.98;text-wrap:balance"><span style="font-weight:800;text-decoration-line:underline;text-decoration-color:var(--accent);text-decoration-thickness:.12em;text-underline-offset:.06em;text-decoration-skip-ink:none">UX/UI</span> for web and mobile products. Easy to use, hard to ignore.</h2>
           <div data-reveal="200" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gutter)">
             <div style="padding-top:14px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">/ 01</span><span style="font-size:clamp(22px,2vw,32px);font-weight:800;letter-spacing:-0.04em;line-height:1">Web</span><span style="font-size:14px;line-height:1.45;color:var(--fg-2)">Websites, web apps, SaaS and e-commerce</span></div>
@@ -318,9 +323,9 @@
         <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.SectionLabel" index="08" label="Contact" rule="{{ true }}" hint-size="100%,28px"></x-import>
       </div>
       <h2 ref="{{ contactRef }}" class="{{ contactCls }}" style="margin:clamp(40px,6vw,96px) 0 0;font-size:var(--fs-mega);font-weight:800;letter-spacing:-0.065em;line-height:.84">
-        <span class="al-line" style="--i:0;padding-bottom:.2em;margin-bottom:-.2em"><span>Let's</span></span>
-        <span class="al-line" style="--i:1;padding-bottom:.2em;margin-bottom:-.2em;padding-left:{{ L.ctaIndent }}"><span>work</span></span>
-        <span class="al-line" style="--i:2;padding-bottom:.2em;margin-bottom:-.2em"><span>together.</span></span>
+        <span class="al-line" style="--i:0;padding-bottom:.3em;margin-bottom:-.3em"><span>Let's</span></span>
+        <span class="al-line" style="--i:1;padding-bottom:.3em;margin-bottom:-.3em;padding-left:{{ L.ctaIndent }}"><span>work</span></span>
+        <span class="al-line" style="--i:2;padding-bottom:.3em;margin-bottom:-.3em"><span>together.</span></span>
       </h2>
 
       <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:32px;margin-top:clamp(56px,7vw,112px)">
@@ -334,7 +339,8 @@
             <sc-for list="{{ contacts }}" as="c" hint-placeholder-count="4">
               <div data-reveal="{{ c.delay }}">
                 <a href="{{ c.href }}" target="{{ c.target }}" rel="noreferrer" onMouseEnter="{{ c.enter }}" onFocus="{{ c.enter }}" onBlur="{{ cLeave }}" style="position:relative;display:grid;grid-template-columns:{{ L.cCols }};grid-template-areas:{{ L.cAreas }};column-gap:var(--gutter);row-gap:8px;align-items:baseline;padding:clamp(18px,2vw,28px) 0;border-top:1px solid var(--border);color:var(--fg-1);text-decoration:none">
-                  <div style="position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--fg-1);transform-origin:left;transform:scaleX({{ c.line }});transition:transform 1s var(--ease-out)"></div>
+                  <div style="position:absolute;left:0;right:0;top:-1px;height:1px;z-index:1;background:var(--accent);transform-origin:left;transform:scaleX({{ c.line }});transition:transform 1s var(--ease-out)"></div>
+                  <div style="position:absolute;left:0;right:0;bottom:-1px;height:1px;z-index:1;background:var(--accent);transform-origin:left;transform:scaleX({{ c.line }});transition:transform 1s var(--ease-out)"></div>
                   <span style="grid-area:label;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)">{{ c.label }}</span>
                   <span style="grid-area:handle;min-width:0;overflow-wrap:anywhere;font-size:clamp(24px,3vw,48px);font-weight:700;letter-spacing:-0.04em;line-height:1.04;transform:translateX({{ c.shift }});transition:transform .7s var(--ease-out)"><span style="background:{{ c.bg }};padding:0 .06em;margin-left:-.06em;transition:background .3s">{{ c.handle }}</span></span>
                   <span style="grid-area:arrow;justify-self:end;display:inline-flex;transform:rotate({{ c.rot }});transition:transform .7s var(--ease-out)"><x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Icon" name="arrow-up-right" size="{{ 20 }}" hint-size="20px,20px"></x-import></span>
@@ -345,9 +351,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section><x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Footer" tagline="{{ footerTagline }}" columns="{{ footerColumns }}" year="{{ 2026 }}" note="Ukraine — Available for work" hint-size="100%,560px"></x-import>
 
-  <x-import component-from-global-scope="AntonLutsykDesignSystem_0097c3.Footer" tagline="{{ footerTagline }}" columns="{{ footerColumns }}" year="{{ 2026 }}" note="Ukraine — Available for work" hint-size="100%,560px"></x-import>
+  
 
   <div ref="{{ cursorRef }}" aria-hidden="true" style="position:fixed;left:0;top:0;z-index:200;pointer-events:none;display:none;will-change:transform">
     <div ref="{{ cursorInner }}" style="position:absolute;left:0;top:0;transform:translate(-50%,-50%);width:10px;height:10px;border-radius:50%;background:var(--al-ink);box-shadow:0 0 0 1px var(--al-paper);display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:nowrap;transition:width .45s var(--ease-out),height .45s var(--ease-out),border-radius .45s var(--ease-out),background .3s">
@@ -601,7 +607,7 @@ class Component extends DCLogic {
       introLead: m ? '1 / -1' : t ? '4 / 10' : '5 / 10', leadOrder: m ? 1 : 0,
       introContact: m ? '1 / -1' : t ? '10 / 13' : '10 / 13',
       scrollCol: m ? '1 / -1' : '1 / 4', scrollOrder: m ? 2 : 0, focusCol: m ? '1 / -1' : t ? '4 / 13' : '5 / 13',
-      xIdx: m ? '1 / -1' : '1 / 3', xTitle: m ? '1 / -1' : t ? '3 / 13' : '3 / 9', xMeta: m ? '1 / -1' : t ? '3 / 13' : '9 / 13', xPanel: m ? '1 / -1' : '3 / 13',
+      xIdx: m ? '1 / 4' : '1 / 3', xIdxPad: m ? '0px' : 'clamp(12px,2vw,40px)', xTitle: m ? '4 / -1' : t ? '3 / 13' : '3 / 9', xMeta: m ? '4 / -1' : t ? '3 / 13' : '9 / 13', xPanel: m ? '4 / -1' : '3 / 13',
       xMetaCols: m ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))',
       ex1Bt: m ? '1px solid rgba(17,17,17,.08)' : '0', bulletCols: m ? 'minmax(0,1fr)' : t ? 'repeat(2,minmax(0,1fr))' : 'repeat(10,minmax(0,1fr))',
       exLead: m ? '1 / -1' : t ? '1 / -1' : '3 / 11', exCols: m ? 'minmax(0,1fr)' : 'repeat(2,minmax(0,1fr))', exCellH: m ? '0' : 'clamp(280px,24vw,360px)', exSvg: m ? '88px' : 'clamp(120px,11vw,184px)', exList: m ? '1 / -1' : '9 / 13',
@@ -621,7 +627,7 @@ class Component extends DCLogic {
       const dir = i % 2 === 0 ? 'r' : 'l';
       const hov = s.xHover === i, open = s.xOpen === i, dim = s.xHover != null && !hov;
       return Object.assign({}, x, {
-        n: this.pad(i + 1, 3), bt: i === 0 ? '0' : '1px solid var(--border)', lineDisp: i === 0 ? 'none' : 'block', delay: i * 90, dir, bullets: x.bullets.map((b, j) => ({ n: this.pad(j + 1, 2), col: m || t ? 'auto' : (j % 2 ? '7 / -1' : '1 / 7'), t: b })),
+        n: this.pad(i + 1, 3), n2: this.pad(i + 1, 2), idxLine: hov || open ? 'var(--accent)' : 'var(--border)', bt: i === 0 ? '0' : '1px solid rgba(17,17,17,.08)', lineDisp: i === 0 ? 'none' : 'block', delay: i * 90, dir, bullets: x.bullets.map((b, j) => ({ n: this.pad(j + 1, 2), col: m || t ? 'auto' : (j % 2 ? '7 / -1' : '1 / 7'), t: b })),
         chipBg: hov || open ? 'var(--accent)' : 'transparent', color: dim ? 'var(--fg-3)' : 'var(--fg-1)',
         shift: hov && !m ? 'clamp(8px,1.4vw,24px)' : '0px', metaShift: hov && !m ? '-8px' : '0px',
         arrowOp: hov || (m && open) ? 1 : 0, arrowXY: hov ? '0px,0px' : '-10px,10px', rot: open ? '90deg' : '0deg', line: hov ? 1 : 0,
@@ -714,7 +720,8 @@ class Component extends DCLogic {
         this.setState({ copied: true }); clearTimeout(this.copyT); this.copyT = setTimeout(() => this.setState({ copied: false }), 1800);
       },
       cursorRef: this.cursorRef, cursorInner: this.cursorInner, cursorLabel: this.cursorLabel,
-      footerTagline: e(React.Fragment, null, 'Anton Lutsyk designs products for web and mobile.'),
+      brandLogo: this.brandLogo || (this.brandLogo = e('img', { src: 'assets/logo.png', alt: 'Anton Lutsyk', width: 972, height: 178, style: { display: 'block', height: 'clamp(20px,1.7vw,26px)', width: 'auto' } })),
+      footerTagline: e(React.Fragment, null, 'Thoughtful UX. Distinctive UI.', e('br'), 'Better products.'),
       footerColumns: [
         { label: '/Content', links: [
           { label: 'Work', onClick: (ev) => { ev.preventDefault(); nav('work'); } },
