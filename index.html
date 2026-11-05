@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Anton Lutsyk, UX/UI designer and frontend developer from Ukraine. Designs web and mobile products for B2B, SaaS and e-commerce, and builds them in HTML, CSS and React.">
-<meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F0F0E" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4F3EF">
 <meta property="og:title" content="Anton Lutsyk — UX/UI Designer &amp; Frontend Developer">
 <meta property="og:description" content="UX/UI for web and mobile products. Easy to use, hard to ignore.">
 <meta property="og:image" content="assets/portrait.jpg">
@@ -28,7 +27,7 @@
   <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/components/components.css">
   <link rel="stylesheet" href="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/styles.css">
   <script src="_ds/anton-lutsyk-design-system-0097c351-c3a8-4660-8a0a-e40363b54e38/_ds_bundle.js"></script>
-  <script src="avatar-glb.js?v=10"></script>
+  <script src="avatar-glb.js?v=11"></script>
   <style>
     body{margin:0;background:var(--bg);overflow-x:hidden}
     a{color:var(--fg-1)}
@@ -41,7 +40,6 @@
     .al-header__nav{grid-column:1/-1;grid-row:1;justify-self:center}
     .al-menu .al-header__brand img{filter:invert(1)}
     .al-seclabel--rule{border-top-color:var(--hair-strong)}
-    @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .al-header__brand img{filter:invert(1)}}
     :root[data-theme="dark"] .al-header__brand img{filter:invert(1)}
     .al-header__nav{display:none!important}
     .al-ix{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:52;display:grid;grid-template-columns:repeat(3,112px);height:34px;border:1px solid var(--border);font-family:var(--font-sans)}
@@ -411,7 +409,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;customCursor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Interaction&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;full&quot;,&quot;reduced&quot;],&quot;default&quot;:&quot;full&quot;,&quot;tsType&quot;:&quot;'full' | 'reduced'&quot;,&quot;section&quot;:&quot;Interaction&quot;}}">
 class Component extends DCLogic {
-  isDark() { const a = document.documentElement.getAttribute('data-theme'); return a === 'dark' || (a !== 'light' && !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches); }
+  isDark() { return document.documentElement.getAttribute('data-theme') === 'dark'; }
   state = { dark: typeof window !== 'undefined' && this.isDark(), vw: typeof window !== 'undefined' ? window.innerWidth : 1440, active: 'intro', secIdx: 0, compact: false, stHov: false, xHover: null, xOpen: null, exHover: null, swHover: null, swActive: 0, more: false, cHover: null, copied: false, aboutIn: false, contactIn: false, time: '' };
   cursorRef = React.createRef(); cursorInner = React.createRef(); cursorLabel = React.createRef();
   contactRef = React.createRef(); aboutFigRef = React.createRef(); wkRef = React.createRef();

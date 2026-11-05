@@ -44,7 +44,7 @@
       const dq = matchMedia('(prefers-color-scheme: dark)');
       const applyScheme = () => {
         const pin = document.documentElement.getAttribute('data-theme');
-        const dark = pin === 'dark' || (pin !== 'light' && dq.matches);
+        const dark = pin === 'dark';
         rimL.intensity = dark ? 2.6 : 0; rimR.intensity = dark ? 1.8 : 0;
         r.toneMappingExposure = dark ? 1.18 : 1.0;
       };
