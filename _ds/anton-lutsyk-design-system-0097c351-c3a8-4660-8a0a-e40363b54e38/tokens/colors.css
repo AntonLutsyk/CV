@@ -58,3 +58,47 @@
   background:var(--bg);
   color:var(--fg-1);
 }
+
+/* hairline tints (light) */
+:root{
+  --hair:rgba(17,17,17,.08);
+  --hair-strong:rgba(17,17,17,.18);
+  --al-night:#0F0F0E;
+  --al-night-2:#1A1A19;
+  --al-night-stone:#A3A29C;
+  color-scheme:light;
+}
+
+/* dark theme — follows the OS unless a page pins data-theme="light" */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:var(--al-night);
+    --surface:var(--al-night);
+    --surface-2:var(--al-night-2);
+    --surface-3:#242423;
+    --surface-inverse:var(--al-paper);
+    --fg-1:var(--al-paper);
+    --fg-2:var(--al-night-stone);
+    --fg-3:#5E5D59;
+    --fg-inverse:var(--al-ink);
+    --border:var(--al-ink-line);
+    --border-strong:var(--al-paper);
+    --focus-ring:var(--al-lime);
+    --hair:rgba(244,243,239,.1);
+    --hair-strong:rgba(244,243,239,.2);
+  }
+  :root:not([data-theme="light"]) .al-inverse{
+    --bg:var(--al-night-2);
+    --surface:var(--al-night-2);
+    --surface-2:#242423;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:var(--al-night); --surface:var(--al-night); --surface-2:var(--al-night-2); --surface-3:#242423; --surface-inverse:var(--al-paper);
+  --fg-1:var(--al-paper); --fg-2:var(--al-night-stone); --fg-3:#5E5D59; --fg-inverse:var(--al-ink);
+  --border:var(--al-ink-line); --border-strong:var(--al-paper); --focus-ring:var(--al-lime);
+  --hair:rgba(244,243,239,.1); --hair-strong:rgba(244,243,239,.2);
+}
+:root[data-theme="dark"] .al-inverse{--bg:var(--al-night-2);--surface:var(--al-night-2);--surface-2:#242423}

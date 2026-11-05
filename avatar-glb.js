@@ -13,10 +13,14 @@
       if (!this.style.width) this.style.width = '100%'; if (!this.style.height) this.style.height = '100%';
       const gen = this._gen = (this._gen || 0) + 1;
       (async () => {
-        const T = await import(THREE_URL);
-        const { GLTFLoader } = await import(`https://esm.sh/three@${V}/examples/jsm/loaders/GLTFLoader.js`);
-        const { RoomEnvironment } = await import(`https://esm.sh/three@${V}/examples/jsm/environments/RoomEnvironment.js`);
-        const gltf = await new GLTFLoader().loadAsync(MODEL);
+        // Model is meshopt-compressed with WebP textures; fetch modules in parallel.
+        const [T, { GLTFLoader }, { RoomEnvironment }, { MeshoptDecoder }] = await Promise.all([
+          import(THREE_URL),
+          import(`https://esm.sh/three@${V}/examples/jsm/loaders/GLTFLoader.js`),
+          import(`https://esm.sh/three@${V}/examples/jsm/environments/RoomEnvironment.js`),
+          import(`https://esm.sh/three@${V}/examples/jsm/libs/meshopt_decoder.module.js`)
+        ]);
+        const gltf = await new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(MODEL);
         if (gen === this._gen && this.isConnected) this.setup(T, gltf, RoomEnvironment);
       })().catch((e) => console.warn('al-avatar-glb failed', e));
     }
@@ -34,6 +38,19 @@
       const key = new T.DirectionalLight(0xffeedd, 1.7); key.position.set(0.9, 5.2, 2.2); key.castShadow = true;
       key.shadow.mapSize.set(2048, 2048); key.shadow.radius = 10; key.shadow.blurSamples = 20; key.shadow.bias = -0.0004; key.shadow.normalBias = 0.02;
       scene.add(key, key.target);
+      // Dark theme: back rim lights trace the silhouette so dark clothing separates from a night background.
+      const rimL = new T.DirectionalLight(0xf4f3ef, 0), rimR = new T.DirectionalLight(0xdfe6ff, 0);
+      rimL.position.set(-2.4, 2.6, -3.2); rimR.position.set(2.6, 2.2, -3.0); scene.add(rimL, rimR);
+      const dq = matchMedia('(prefers-color-scheme: dark)');
+      const applyScheme = () => {
+        const pin = document.documentElement.getAttribute('data-theme');
+        const dark = pin === 'dark' || (pin !== 'light' && dq.matches);
+        rimL.intensity = dark ? 2.6 : 0; rimR.intensity = dark ? 1.8 : 0;
+        r.toneMappingExposure = dark ? 1.18 : 1.0;
+      };
+      applyScheme(); if (dq.addEventListener) dq.addEventListener('change', applyScheme);
+      // the page's theme toggle pins data-theme on <html>
+      new MutationObserver(applyScheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
       // normalise model: height 1.78, feet at y=0, centred
       // clean scan texture: remove bright speckles on dark fabric (median of a 3px ring)
